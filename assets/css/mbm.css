@@ -1,1 +1,567 @@
 
+:root {
+    --gold: #C6A96B;
+    --gold-light: #C2B59B;
+    --charcoal: #1a1a1a;
+    --white-dim: rgba(255,255,255,0.06);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --bg-body: #111111;
+    --text-body: #e8e0d4;
+    --text-white: #fff;
+    --font-display: 'DM Serif Display', serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+  }
+
+  :root {
+    /* === Base Colors === */
+    --color-bg-primary: #000000;
+    --color-bg-secondary: #0A0A0A;
+  
+    /* === Text Colors === */
+    --color-text-primary: #EAEAEA;
+    --color-text-secondary: #7A7A7A;
+  
+    /* === Gold Accents === */
+    --color-gold: #C6A96B;
+    --color-gold-soft: #D4B87A;
+    --color-gold-muted: #5A5242;
+  
+    /* === Borders & Dividers === */
+    --color-border: #1A1A1A;
+  
+    /* === Optional UI Enhancements === */
+    --color-hover-glow: rgba(212, 184, 122, 0.25);
+    --color-glass-bg: rgba(255, 255, 255, 0.03);
+    --color-glass-border: rgba(255, 255, 255, 0.08);
+  }
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  html { scroll-behavior: smooth; }
+  
+  body {
+    background: var(--bg-body);
+    color: var(--text-body);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+  
+  /* ── TYPOGRAPHY ── */
+  .font-display { font-family: var(--font-display); }
+  .font-serif   { font-family: var(--font-serif); }
+  .font-sans    { font-family: var(--font-sans); }
+  
+  /* ── GLASSMORPHISM ── */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid var(--white-dim);
+  }
+  .glass-gold {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px) saturate(1.6);
+    -webkit-backdrop-filter: blur(24px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+  }
+  
+  /* ── ANIMATED BORDER BUTTON ── */
+  .btn-animated {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 36px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: var(--gold-light);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background 0.4s ease, color 0.4s ease, transform 0.3s ease;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .btn-animated::before,
+  .btn-animated::after {
+    content: '';
+    position: absolute;
+    border-radius: 2px;
+  }
+  /* Animated SVG border via conic-gradient spin */
+  .btn-animated .border-spin {
+    position: absolute;
+    inset: -2px;
+    border-radius: 3px;
+    background: conic-gradient(
+      from var(--angle, 0deg),
+      transparent 0deg,
+      var(--color-gold-muted) 60deg,
+      var(--gold-light) 90deg,
+      var(--gold-light) 120deg,
+      transparent 180deg,
+      transparent 360deg
+    );
+    animation: spin-border 3s linear infinite;
+    z-index: -1;
+  }
+  .btn-animated .border-inner {
+    position: absolute;
+    inset: 1px;
+    background: rgba(17,17,17,0.88);
+    backdrop-filter: blur(20px);
+    border-radius: 2px;
+    z-index: -1;
+  }
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  @keyframes spin-border {
+    to { --angle: 360deg; }
+  }
+  .btn-animated:hover {
+    background: rgba(201,169,110,0.10);
+    color: var(--text-white);
+    transform: translateY(-1px);
+  }
+  .btn-animated:hover .border-spin {
+    animation-duration: 1.5s;
+  }
+
+  .btn-animated-hero {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 36px;
+    background: transparent;
+   
+    color: var(--text-body);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border:1px solid var(--gold-light);
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .btn-animated-hero:hover {
+   background-color: var(--gold-light);
+   color: var(--charcoal);
+  }
+  
+  /* Dark variant */
+  .btn-animated-dark .border-inner { background: var(--charcoal); }
+
+  /* ═══════════════════════════════════════ SPLASH SCREEN ═══════════════════════════════════════ */
+#splash-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+  }
+  
+  #splash-screen.done {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  .splash-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  /* MBM Logo */
+  .splash-mbm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: splashMbmIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  }
+  
+  .splash-mbm svg {
+    opacity: 0.9;
+  }
+  
+  .splash-mbm-text {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    color: #b9b9b9;
+    text-transform: uppercase;
+  }
+  
+  /* Reveal Mask Container — the CapCut-style effect */
+  .splash-reveal-mask {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    overflow: hidden;
+  }
+  
+  /* The gold line that draws first */
+  .splash-reveal-line {
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    animation: splashLineExpand 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+  }
+  
+  /* Text hidden behind mask, slides up */
+  .splash-reveal-text {
+    display: flex;
+    gap: 8px;
+    overflow: hidden;
+    padding: 2px 0;
+  }
+  
+  .splash-reveal-text span {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--gold-light);
+    letter-spacing: 0.12em;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: splashTextReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .splash-reveal-text span:nth-child(1) { animation-delay: 0.9s; }
+  .splash-reveal-text span:nth-child(2) { animation-delay: 1.05s; }
+  .splash-reveal-text span:nth-child(3) { animation-delay: 1.20s; }
+  
+  /* Progress bar at bottom */
+  .splash-progress {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 1px;
+    background: rgba(201, 169, 110, 0.1);
+    overflow: hidden;
+    border-radius: 1px;
+  }
+  
+  .splash-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--gold);
+    animation: splashProgress 2.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  }
+  
+  /* ═══════════════════════════════════════ SPLASH KEYFRAMES ═══════════════════════════════════════ */
+  @keyframes splashMbmIn {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes splashLineExpand {
+    to {
+      width: 140px;
+    }
+  }
+  
+  @keyframes splashTextReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes splashProgress {
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Hide main content initially to prevent flash */
+  body.splash-active {
+    overflow: hidden;
+  }
+  
+  body.splash-active #navbar,
+  body.splash-active #hero,
+  body.splash-active section,
+  body.splash-active footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  body:not(.splash-active) #navbar,
+  body:not(.splash-active) #hero,
+  body:not(.splash-active) section,
+  body:not(.splash-active) footer {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Stagger the main content reveal */
+  body:not(.splash-active) #navbar { transition-delay: 0.1s; }
+  body:not(.splash-active) #hero   { transition-delay: 0.25s; }
+  body:not(.splash-active) #metrics{ transition-delay: 0.35s; }
+  body:not(.splash-active) #services{ transition-delay: 0.40s; }
+  body:not(.splash-active) #about  { transition-delay: 0.45s; }
+  body:not(.splash-active) #process{ transition-delay: 0.50s; }
+  body:not(.splash-active) #testimonials{ transition-delay: 0.55s; }
+  body:not(.splash-active) #faq    { transition-delay: 0.60s; }
+  body:not(.splash-active) #contact{ transition-delay: 0.65s; }
+  body:not(.splash-active) footer  { transition-delay: 0.70s; }
+  
+  /* ── HERO ANIMATIONS ── */
+  @keyframes slideLeft {
+    from { opacity: 0; transform: translateX(-60px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-10px); }
+  }
+  @keyframes pulse-gold {
+    0%, 100% { opacity: 0.4; }
+    50%       { opacity: 0.8; }
+  }
+  @keyframes draw-path {
+    from { stroke-dashoffset: 1000; }
+    to   { stroke-dashoffset: 0; }
+  }
+  @keyframes counter {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  .hero-tag  { animation: slideLeft 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
+  .hero-h1   { animation: slideLeft 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
+  .hero-sub  { animation: slideLeft 0.9s cubic-bezier(0.16,1,0.3,1) 0.6s both; }
+  .hero-cta  { animation: slideLeft 0.9s cubic-bezier(0.16,1,0.3,1) 0.8s both; }
+  .hero-img  { animation: fadeIn 1.2s ease 0.5s both; }
+  .hero-badge { animation: slideUp 1s cubic-bezier(0.16,1,0.3,1) 1.2s both, float 4s ease-in-out 2s infinite; }
+  
+  /* Gold shimmer text */
+  .gold-shimmer {
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 40%, #fff8e7 50%, var(--gold-light) 60%, var(--gold) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+  
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(17,17,17,0.90);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201,169,110,0.12);
+  }
+  
+  /* ── SECTION NUMBERS ── */
+  .section-num {
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    font-family: var(--font-display);
+    font-size: clamp(80px, 12vw, 140px);
+    color: rgba(255,255,255,0.025);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* ── 3D CARD ── */
+  .card-3d {
+    transition: transform 0.4s cubic-bezier(0.23,1,0.32,1), box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+  }
+  .card-3d:hover {
+    transform: translateY(-6px) rotateX(2deg) rotateY(-2deg);
+    box-shadow: 12px 24px 60px rgba(38, 38, 38, 0.6), 0 0 0 1px rgba(147, 137, 118, 0.15);
+  }
+  
+  /* ── SVG PATHS ── */
+  .svg-path {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.18;
+  }
+  .path-animate {
+    stroke-dasharray: 8 6;
+    stroke-dashoffset: 0;
+    animation: march 20s linear infinite;
+  }
+  @keyframes march {
+    to { stroke-dashoffset: -280; }
+  }
+  
+  /* ── METRICS ── */
+  .metric-val {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* ── TESTIMONIAL ── */
+  .stars { color: var(--gold); letter-spacing: 2px; }
+  
+  /* ── ACCORDION (FAQ) ── */
+  .faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1), padding 0.3s ease;
+  }
+  .faq-body.open { max-height: 300px; padding-top: 16px; }
+  .faq-icon { transition: transform 0.35s ease; }
+  .faq-icon.open { transform: rotate(45deg); }
+  
+  /* ── DIVIDER LINE ── */
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,169,110,0.30), transparent); }
+  
+  /* ── SCROLL REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  
+  /* ── CUSTOM SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg-body); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+  
+  /* ── STEP CONNECTOR ── */
+  .step-connector { position: relative; }
+  .step-connector::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: calc(100% + 12px);
+    width: calc(100% - 24px);
+    height: 1px;
+    background: linear-gradient(90deg, rgba(201,169,110,0.4), transparent);
+    pointer-events: none;
+  }
+  @media (max-width: 768px) { .step-connector::after { display: none; } }
+  
+  /* ── INPUT ── */
+  input, textarea, select {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-body);
+    padding: 14px 18px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    width: 100%;
+    border-radius: 2px;
+  }
+  input:focus, textarea:focus {
+    border-color: rgba(201,169,110,0.5);
+    background: rgba(201,169,110,0.04);
+  }
+  input::placeholder, textarea::placeholder { color: rgba(200,190,180,0.35); }
+
+
+/* ── HERO BUTTON: transparent with animated border ── */
+#hero .btn-hero.btn-animated {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+#hero .btn-hero.btn-animated .border-inner {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+#hero .btn-hero.btn-animated:hover {
+  background: transparent !important;
+  color: #111111 !important;
+}
+#hero .btn-hero.btn-animated:hover .border-inner {
+  background: var(--gold-light) !important;
+}
+#hero .btn-hero.btn-animated:hover .border-spin {
+  opacity: 0 !important;
+}
+#hero .btn-hero.btn-animated:hover svg path {
+  stroke: #111111 !important;
+}
+
+/* ── NAV BUTTON (not scrolled): transparent with animated border ── */
+nav:not(.scrolled) .btn-animated.btn-animated-dark {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+nav:not(.scrolled) .btn-animated.btn-animated-dark .border-inner {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+nav:not(.scrolled) .btn-animated.btn-animated-dark:hover {
+  background: transparent !important;
+  color: #111111 !important;
+}
+nav:not(.scrolled) .btn-animated.btn-animated-dark:hover .border-inner {
+  background: var(--gold-light) !important;
+}
+nav:not(.scrolled) .btn-animated.btn-animated-dark:hover .border-spin {
+  opacity: 0 !important;
+}
