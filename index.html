@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MBM Conciergerie— Paris Luxury Concierge</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/mbm.css">
-  <base target="_blank">
-<base target="_blank">
-<base target="_blank">
-<base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBM Conciergerie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Remix Icons for hamburger and UI icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/checkout.css" />
 </head>
-<body>
+<body class="splash-active">
 
+  
   <!-- ═══════════════════════════════════════ SPLASH SCREEN ═══════════════════════════════════════ -->
 <div id="splash-screen">
   <div class="splash-inner">
     <!-- MBM Monogram -->
     <div class="splash-mbm">
       <div class="splash-mbm-text">MBM</div>
-      <span style="color: #C0C0C0;">Conciergerie</span>
+      <span>Conciergerie</span>
     </div>
     
     <!-- Reveal mask container -->
@@ -41,722 +38,501 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
-<nav id="navbar" class="px-6 lg:px-16 py-5">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
-    <!-- Logo -->
-    <a href="#" class="flex items-center gap-3">
-      
-      <div>
-        <div class="font-display text-[28px] tracking-[0.22em] text-white uppercase">MBM</div>
-        <div class="font-sans text-[8px] tracking-[0.35em] text-[#C0C0C0] uppercase" style="letter-spacing:0.38em">Conciergerie</div>
-      </div>
-    </a>
-
-    <!-- Links -->
-    <ul class="hidden lg:flex items-center gap-10">
-      <li><a href="#services" class="font-sans text-[11px] tracking-[0.18em] uppercase text-[#a0a0a0] hover:text-[#ffffff] transition-colors duration-300">Services</a></li>
-      <li><a href="#about" class="font-sans text-[11px] tracking-[0.18em] uppercase text-[#a0a0a0] hover:text-[#ffffff] transition-colors duration-300">About</a></li>
-      <li><a href="#process" class="font-sans text-[11px] tracking-[0.18em] uppercase text-[#a0a0a0] hover:text-[#ffffff] transition-colors duration-300">Process</a></li>
-      <li><a href="#testimonials" class="font-sans text-[11px] tracking-[0.18em] uppercase text-[#a0a0a0] hover:text-[#ffffff] transition-colors duration-300">Testimonials</a></li>
-    </ul>
-
-    <!-- CTA -->
-    <a href="#contact" class="btn-animated-hero btn-animated-dark hidden lg:inline-flex">
-      <span class="border-spin"></span>
-      <span class="border-inner"></span>
-      Réserver une Consultation
-    </a>
-
-    <!-- Mobile menu -->
-    <button id="menu-btn" class="lg:hidden text-white">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <line x1="2" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="1.2"/>
-        <line x1="2" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.2"/>
-        <line x1="2" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="1.2"/>
-      </svg>
-    </button>
+<header class="navbar" id="navbar">
+  <div class="logo">
+    <span class="logo-main">MBM</span>
+    <span class="logo-sub">CONCIERGERIE</span>
   </div>
 
-  <!-- Mobile menu panel -->
-  <div id="mobile-menu" class="hidden lg:hidden glass mt-3 rounded p-6 mx-0">
-    <ul class="flex flex-col gap-5">
-      <li><a href="#services" class="font-sans text-[12px] tracking-[0.18em] uppercase text-[#a0a0a0]">Services</a></li>
-      <li><a href="#about" class="font-sans text-[12px] tracking-[0.18em] uppercase text-[#a0a0a0]">About</a></li>
-      <li><a href="#process" class="font-sans text-[12px] tracking-[0.18em] uppercase text-[#a0a0a0]">Process</a></li>
-      <li><a href="#testimonials" class="font-sans text-[12px] tracking-[0.18em] uppercase text-[#a0a0a0]">Testimonials</a></li>
-      <li><a href="#contact" class="btn-animated mt-2 text-center justify-center"><span class="border-spin"></span><span class="border-inner"></span>Réserver une Consultation</a></li>
-    </ul>
-  </div>
+  <nav>
+    <a href="#">Services</a>
+    <a href="#">Off Market</a>
+    <a href="#">International</a>
+    <a href="#">Signature</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <a href="#" class="btn-outline">DEMANDE PRIVÉE</a>
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <i class="ri-menu-3-fill"></i>
+  </button>
+</header>
+
+<!-- Mobile dropdown menu -->
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="#">Services</a>
+  <a href="#">Off Market</a>
+  <a href="#">International</a>
+  <a href="#">Signature</a>
+  <a href="#">Contact</a>
+  <a href="#" class="btn-mobile" style="letter-spacing:3px;">DEMANDE PRIVÉE</a>
 </nav>
 
-<!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
-<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-  <!-- BG image + B&W overlay -->
-  <div class="absolute inset-0">
-    <img
-      src="paris.jpg"
-      alt="Paris"
-      class="w-full h-full object-cover"
-      style="object-position: center 30%; filter: grayscale(100%) brightness(0.5) contrast(1.1);"
-    />
-    <!-- Dark overlay for readability -->
-    <div class="absolute inset-0" style="background: rgba(0,0,0,0.45);"></div>
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <p class="subtitle">Conciergerie privée internationale</p>
+
+    <h1>MBM <em>Conciergerie</em></h1>
+    <div class="section-divider">
+      <span class="section-divider-line"></span>
+      <span class="section-divider-diamond"></span>
+      <span class="section-divider-line"></span>
+    </div><br>
+
+    <p class="tagline">Un accès privilégié à l'exceptionnel.</p>
+
+    <p class="description">
+      MBM Conciergerie accompagne une clientèle internationale exigeante dans
+      l'organisation, l'accès et la gestion de prestations exclusives à travers
+      le monde. Chaque demande est traitée avec discrétion absolue et efficacité.
+    </p>
+
+    <a href="#" class="btn-primary">ACCÉDER À VOTRE SERVICE PRIVÉ</a>
+
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="services">
+  
+  <!-- Section Header -->
+  <div class="section-header">
+    <p class="section-label">Prestations</p>
+    <h2 class="section-title">Prestations <em>Signature</em></h2>
+    <div class="section-divider">
+      <span class="section-divider-line"></span>
+      <span class="section-divider-diamond"></span>
+      <span class="section-divider-line"></span>
+    </div>
   </div>
 
-  <!-- SVG decorative path -->
-  <svg class="svg-path" style="bottom:60px;right:80px;width:340px;height:200px" viewBox="0 0 340 200" fill="none">
-    <path d="M10,180 C60,100 120,20 200,40 C280,60 310,140 330,20" stroke="#9A9A9A" stroke-width="1.2" class="path-animate" fill="none"/>
-  </svg>
+  <div class="grid">
 
-  <!-- Content centered -->
-  <div class="relative max-w-4xl mx-auto px-6 lg:px-16 w-full text-center pt-28 pb-20">
-    <!-- Tag -->
-    <div class="hero-tag inline-flex items-center gap-3 mb-8 justify-center">
-      <div style="width:30px;height:1px;background:#9A9A9A"></div>
-      <span class="font-sans text-[10px] tracking-[0.4em] uppercase text-[#9A9A9A]"> Paris, France</span>
-      <div style="width:30px;height:1px;background:#9A9A9A"></div>
+    <div class="card">
+      <span class="index">0I</span>
+      <h3>Aviation Privée</h3>
+      <p>Location de jet privé sur tous continents.</p>
+      <div class="line"></div>
     </div>
 
-    <!-- Headline -->
-    <h1 class="hero-h1 font-display leading-[1.08] mb-6" style="font-size:clamp(44px,6.5vw,86px)">
-      L'art du <em class="font-serif not-italic gold-shimmer">Service, </em> Sans Limite.
-    </h1>
+    <div class="card">
+      <span class="index">02</span>
+      <h3>Villas de Prestige</h3>
+      <p>Demeures d'exception sélectionnées avec rigueur.</p>
+      <div class="line"></div>
+    </div>
 
-    <!-- Subline -->
-    <p class="hero-sub font-sans font-light text-[14px] leading-relaxed text-[#a0a0a0] mb-10 max-w-[540px] mx-auto">
-      Service de conciergerie privée dédié à une clientèle exigeante recherchant discrétion — efficacité et accès privilégié — vivez sans limite.
-    </p>
-     
-    <!-- CTAs -->
-    <div class="hero-cta flex flex-wrap gap-5 items-center justify-center">
-      <a href="#contact" class="btn-animated-hero btn-hero" style="padding:16px 42px;font-size:11px">
-        <span class="border-spin"></span>
-        <span class="border-inner"></span>
-        Nous Contacter
+    <div class="card">
+      <span class="index">03</span>
+      <h3>Véhicules d'Exception</h3>
+      <p>Chauffeur privé. Rolls-Royce, Lamborghini, Bentley.</p>
+      <div class="line"></div>
+    </div>
+
+    <div class="card">
+      <span class="index">04</span>
+      <h3>Séjours sur Mesure</h3>
+      <p>Itinéraires confidentiels orchestrés à la perfection.</p>
+      <div class="line"></div>
+    </div>
+
+    <div class="card">
+      <span class="index">05</span>
+      <h3>Accès Événements Privés</h3>
+      <p>Soirées, courses, ventes, défilés — par invitation.</p>
+      <div class="line"></div>
+    </div>
+
+    <div class="card">
+      <span class="index">06</span>
+      <h3>Réservations Exclusives</h3>
+      <p>Tables, suites, expériences — dernière minute.</p>
+      <div class="line"></div>
+    </div>
+
+    <div class="card">
+      <span class="index">07</span>
+      <h3>Expériences Rares</h3>
+      <p>L'inaccessible, organisé sans compromis.</p>
+      <div class="line"></div>
+    </div>
+
+    <div class="card">
+      <span class="index">08</span>
+      <h3>Demandes Personnelles</h3>
+      <p>Gestion confidentielle de vos requêtes les plus singulières.</p>
+      <div class="line"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PHILOSOPHY SECTION -->
+<section class="philosophy-section">
+  <div class="image-side">
+    <div class="image-border">
+      <img src="villa-CXHtPJSh.jpg" alt="Luxury modern villa with pool at night">
+    </div>
+  </div>
+  <div class="text-side">
+    <p class="section-label">Philosophie</p>
+    <h2 class="section-title">Un service <em>sans limite</em></h2>
+
+    <div class="section-divider">
+      <span class="section-divider-line"></span>
+      <span class="section-divider-diamond"></span>
+      <span class="section-divider-line"></span>
+    </div>
+
+    <p class="description">MBM Conciergerie répond aux demandes les plus exigeantes avec une approche entièrement personnalisée.</p>
+
+    <p class="description">Nous agissons comme partenaire discret de votre quotidien et facilitateur d'accès à <em>l'inaccessible</em>.</p>
+
+    <p class="quote">« Nous nous occupons de tout. Absolument tout. »</p>
+  </div>
+</section>
+
+<!-- PRIVATE ACCESS (OFF MARKET) SECTION -->
+<section class="private-access-section">
+  <div class="private-access-overlay"></div>
+  <div class="private-access-card">
+    <p class="section-label">Confidentiel · Sur invitation</p>
+    <h2 class="section-title">Accès Privé — <em>Off Market</em></h2>
+    
+    <div class="section-divider">
+      <span class="section-divider-line"></span>
+      <span class="section-divider-diamond"></span>
+      <span class="section-divider-line"></span>
+    </div>
+    
+    <p class="description">Certaines opportunités sont uniquement accessibles sur demande confidentielle.</p>
+    
+    <ul class="services-list">
+      <li>Montres de collection — Rolex, Audemars Piguet, Patek Philippe</li>
+      <li>Villas</li>
+      <li>Hôtels particuliers</li>
+      <li>Biens d'exception confidentiels</li>
+      <li>Objets rares & pièces de collection</li>
+    </ul>
+    
+    <div class="bottom-section">
+      <p class="bottom-label">Accès réservé aux membres<br>validés</p>
+      <a href="#" class="cta-button">
+        <span class="cta-text">Faire une demande<br>confidentielle</span>
+        <span class="cta-line"></span>
       </a>
     </div>
+  </div>
+</section>
 
-    <!-- Social proof -->
-    <div class="hero-cta flex items-center gap-4 mt-12 pt-10 justify-center" style="border-top:1px solid rgba(192,192,192,0.12)">
-      <div class="flex -space-x-2">
-        <img src="https://i.pravatar.cc/32?img=1" class="w-8 h-8 rounded-full border border-[#9A9A9A] border-opacity-30 object-cover" alt="">
-        <img src="https://i.pravatar.cc/32?img=5" class="w-8 h-8 rounded-full border border-[#9A9A9A] border-opacity-30 object-cover" alt="">
-        <img src="https://i.pravatar.cc/32?img=9" class="w-8 h-8 rounded-full border border-[#9A9A9A] border-opacity-30 object-cover" alt="">
+<!-- DESTINATIONS SECTION — wrapper for full-width background -->
+<div class="destinations-wrapper">
+  <div class="destinations-overlay"></div>
+  <section class="destinations-section">
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <p class="section-label">International</p>
+      <h2 class="section-title">Présence <em>Internationale</em></h2>
+      <div class="section-divider">
+        <span class="section-divider-line"></span>
+        <span class="section-divider-diamond"></span>
+        <span class="section-divider-line"></span>
       </div>
-      <div class="text-left">
-        <div class="stars text-xs">★★★★★</div>
-        <div class="font-sans text-[10px] text-[#6b6b6b] tracking-wide mt-0.5">2 400+ clients distingués nous font confiance</div>
+    </div>
+
+    <p class="intro-text">Nous accompagnons nos clients à travers les capitales du luxe.</p>
+    
+    <div class="cities-grid">
+      <div class="city-item">Monaco</div>
+      <div class="city-item">Paris</div>
+      <div class="city-item">Londres</div>
+      <div class="city-item">Dubaï</div>
+      <div class="city-item">Genève</div>
+      <div class="city-item">Saint-Tropez</div>
+    </div>
+    
+    <p class="more-destinations">... et bien d'autres destinations.</p>
+    <p class="closing-text">Nous intervenons partout dans le monde, selon vos besoins et vos déplacements.</p>
+  </section>
+</div>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials-section">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <p class="section-label">Témoignages</p>
+      <h2 class="section-title">Retour de <em>nos clients</em></h2>
+      <div class="section-divider">
+        <span class="section-divider-line"></span>
+        <span class="section-divider-diamond"></span>
+        <span class="section-divider-line"></span>
+      </div>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">Service irréprochable. Une discrétion exceptionnelle et une efficacité rare.</p>
+        <div class="testimonial-divider"></div>
+        <div class="author-name">Alexandre R.</div>
+        <div class="author-location">Paris</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">Une équipe capable de rendre possible l'impossible.</p>
+        <div class="testimonial-divider"></div>
+        <div class="author-name">Charlotte M.</div>
+        <div class="author-location">Paris</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">MBM Concierge delivers an extraordinary level of access and precision.</p>
+        <div class="testimonial-divider"></div>
+        <div class="author-name">Edward L.</div>
+        <div class="author-location">Londres</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">Un accompagnement sur mesure digne des plus grandes maisons.</p>
+        <div class="testimonial-divider"></div>
+        <div class="author-name">Marc D.</div>
+        <div class="author-location">Genève</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">Une expérience fluide, élégante et parfaitement exécutée.</p>
+        <div class="testimonial-divider"></div>
+        <div class="author-name">Sofia A.</div>
+        <div class="author-location">Paris</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">Une maison d'exception, toujours à l'écoute et d'une efficacité rare.</p>
+        <div class="testimonial-divider"></div>
+        <div class="author-name">Julien B.</div>
+        <div class="author-location">Paris</div>
       </div>
     </div>
   </div>
-
-  <!-- Bottom tagline - moved outside content div with proper spacing -->
-  <div class="hero-tag absolute bottom-8 -translate-x-1/2 inline-flex items-center gap-3">
-    
-    <span class="font-sans text-[12px] tracking-[0.4em] uppercase text-[#C0C0C0]">Discrétion · Excellence · Sérénité</span>
-    
-  </div>
-</section>
-<!-- ═══════════════════════════════════════ METRICS ═══════════════════════════════════════ -->
-<section id="metrics" class="relative py-20 overflow-hidden">
-  <div class="divider mb-0"></div>
-  <!-- SVG path -->
-  <svg class="svg-path" style="top:-30px;right:10%;width:280px;height:160px" viewBox="0 0 280 160" fill="none">
-    <path d="M280,10 C200,10 100,80 10,150" stroke="#9A9A9A" stroke-width="1" class="path-animate" fill="none"/>
-  </svg>
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-16 py-16">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px" style="background:rgba(160,160,160,0.08)">
-      <!-- Metric 1 -->
-      <div class="reveal glass p-10 text-center" style="background:#000000">
-        <div class="metric-val" data-count="2400">0</div>
-        <div style="width:30px;height:1px;background:rgba(192,192,192,0.25);margin:12px auto"></div>
-        <div class="font-sans text-[10px] tracking-[0.28em] uppercase text-[#6b6b6b]">Distinguished Clients</div>
-      </div>
-      <!-- Metric 2 -->
-      <div class="reveal reveal-delay-1 glass p-10 text-center" style="background:#000000">
-        <div class="metric-val" data-count="18">0</div>
-        <div style="width:30px;height:1px;background:rgba(192,192,192,0.25);margin:12px auto"></div>
-        <div class="font-sans text-[10px] tracking-[0.28em] uppercase text-[#6b6b6b]">Years in Paris</div>
-      </div>
-      <!-- Metric 3 -->
-      <div class="reveal reveal-delay-2 glass p-10 text-center" style="background:#000000">
-        <div class="metric-val" data-count="97">0</div>
-        <div style="width:30px;height:1px;background:rgba(192,192,192,0.25);margin:12px auto"></div>
-        <div class="font-sans text-[10px] tracking-[0.28em] uppercase text-[#6b6b6b]">% Client Satisfaction</div>
-      </div>
-      <!-- Metric 4 -->
-      <div class="reveal reveal-delay-3 glass p-10 text-center" style="background:#000000">
-        <div class="metric-val" data-count="340">0</div>
-        <div style="width:30px;height:1px;background:rgba(192,192,192,0.25);margin:12px auto"></div>
-        <div class="font-sans text-[10px] tracking-[0.28em] uppercase text-[#6b6b6b]">Partner Establishments</div>
-      </div>
-    </div>
-  </div>
-  <div class="divider mt-0"></div>
 </section>
 
-<!-- ═══════════════════════════════════════ SERVICES ═══════════════════════════════════════ -->
-<section id="services" class="relative py-28 overflow-hidden">
-  <!-- Background SVG curves -->
-  <svg class="svg-path" style="top:5%;left:-2%;width:320px;height:400px" viewBox="0 0 320 400" fill="none">
-    <path d="M0,200 C80,50 240,350 320,200" stroke="#9A9A9A" stroke-width="1" class="path-animate" fill="none"/>
-  </svg>
-  <svg class="svg-path" style="bottom:10%;right:0;width:250px;height:300px" viewBox="0 0 250 300" fill="none">
-    <path d="M250,0 C170,100 80,200 0,300" stroke="#9A9A9A" stroke-width="1" class="path-animate" fill="none" style="animation-delay:-5s"/>
-  </svg>
+<!-- SIGNATURE SECTION -->
+<section class="signature">
+  <div class="signature-container">
 
-  <div class="max-w-7xl mx-auto px-6 lg:px-16">
-    <!-- Heading -->
-    <div class="reveal text-center mb-20">
-      <div class="inline-flex items-center gap-3 mb-5">
-        <div style="width:24px;height:1px;background:#9A9A9A"></div>
-        <span class="font-sans text-[10px] tracking-[0.38em] uppercase text-[#9A9A9A]">Ce Que Nous Offrons</span>
-        <div style="width:24px;height:1px;background:#9A9A9A"></div>
+    <!-- LEFT — section-header is left-aligned via CSS -->
+    <div class="signature-left">
+      <div class="section-header">
+        <p class="section-label">Notre Maison</p>
+        <h2 class="section-title">Notre <em>Signature</em></h2>
+        <div class="section-divider">
+          <span class="section-divider-line"></span>
+          <span class="section-divider-diamond"></span>
+          <span class="section-divider-line"></span>
+        </div>
       </div>
-      <h2 class="font-display" style="font-size:clamp(32px,4.5vw,58px);line-height:1.1">Nos <em class="font-serif not-italic gold-shimmer">Services</em> Sur Mesure</h2>
-      <p class="font-sans font-light text-[14px] text-[#6b6b6b] mt-5 max-w-xl mx-auto leading-relaxed">
-        Chaque demande est unique. Notre équipe de gestionnaires de lifestyle dévoués maîtrise l'extraordinaire avec une précision impeccable.
+      <p class="italic">L'art du service personnalisé.</p>
+
+      <p class="tags">
+        DISCRÉTION — EXCELLENCE — SÉRÉNITÉ
       </p>
     </div>
 
-    <!-- Services Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Service 1 -->
-      <div class="reveal card-3d glass relative overflow-hidden p-8" style="border-radius:3px">
-        <div class="section-num">01</div>
-        <div class="mb-6" style="color:#9A9A9A">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 26L8 10l8 6 8-14 4 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.4"/></svg>
-        </div>
-        <h3 class="font-display text-[22px] mb-3">Travel Design Sur Mesure</h3>
-        <p class="font-sans font-light text-[13px] text-[#a0a0a0] leading-relaxed mb-6">Organisation complète de séjours de luxe : villas, hôtels 5 étoiles, itinéraires personnalisés, activités uniques et assistance dédiée.</p>
-        <a href="https://wa.me/330662744394?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20service%20%2ATravel%20Design%20Sur%20Mesure%2A.%20Pourriez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" class="btn-animated btn-animated-dark" style="font-size:10px;padding:10px 24px">
-          <span class="border-spin"></span><span class="border-inner"></span>Demander
-        </a>
+    <!-- RIGHT -->
+    <div class="signature-grid">
+
+      <div class="box">
+        <span class="num">— 01 —</span>
+        <h4>Discrétion absolue</h4>
       </div>
 
-      <!-- Service 2 -->
-      <div class="reveal reveal-delay-1 card-3d glass relative overflow-hidden p-8" style="border-radius:3px">
-        <div class="section-num">02</div>
-        <div class="mb-6" style="color:#9A9A9A">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 28V14M16 28V8M24 28V18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.4"/></svg>
-        </div>
-        <h3 class="font-display text-[22px] mb-3">Mobilité d’Exception</h3>
-        <p class="font-sans font-light text-[13px] text-[#a0a0a0] leading-relaxed mb-6">Location de véhicules de prestige, chauffeurs privés, jets privés et transferts VIP avec un service irréprochable et une disponibilité 24/7.</p>
-        <a href="https://wa.me/330662744394?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20service%20%2AMobilit%C3%A9%20d%27Exception%2A.%20Pourriez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" class="btn-animated btn-animated-dark" style="font-size:10px;padding:10px 24px">
-          <span class="border-spin"></span><span class="border-inner"></span>Demander
-        </a>
+      <div class="box">
+        <span class="num">— 02 —</span>
+        <h4>Excellence opérationnelle</h4>
       </div>
 
-      <!-- Service 3 -->
-      <div class="reveal reveal-delay-2 card-3d glass relative overflow-hidden p-8" style="border-radius:3px">
-        <div class="section-num">03</div>
-        <div class="mb-6" style="color:#9A9A9A">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.4"/></svg>
-        </div>
-        <h3 class="font-display text-[22px] mb-3">Acquisition & Sourcing de Biens d’Exception</h3>
-        <p class="font-sans font-light text-[13px] text-[#a0a0a0] leading-relaxed mb-6">Recherche et vente de produits haut de gamme (montres rares, voitures de luxe, objets exclusifs) avec accès à un réseau confidentiel.</p>
-        <a href="https://wa.me/330662744394?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20service%20%2AAcquisition%20%26%20Sourcing%20de%20Biens%20d%27Exception%2A.%20Pourriez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" class="btn-animated btn-animated-dark" style="font-size:10px;padding:10px 24px">
-          <span class="border-spin"></span><span class="border-inner"></span>Demander
-        </a>
+      <div class="box">
+        <span class="num">— 03 —</span>
+        <h4>Accès privilégié</h4>
       </div>
 
-      <!-- Service 4 -->
-      <div class="reveal reveal-delay-1 card-3d glass relative overflow-hidden p-8" style="border-radius:3px">
-        <div class="section-num">04</div>
-        <div class="mb-6" style="color:#9A9A9A">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 26V12l10-8 10 8v14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="12" y="18" width="8" height="8" stroke="currentColor" stroke-width="1.2"/><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.4"/></svg>
-        </div>
-        <h3 class="font-display text-[22px] mb-3">Expériences Exclusives & Accès Privés</h3>
-        <p class="font-sans font-light text-[13px] text-[#a0a0a0] leading-relaxed mb-6">Réservations prioritaires dans restaurants étoilés, accès à des événements privés, soirées VIP et lieux habituellement inaccessibles.</p>
-        <a href="https://wa.me/330662744394?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20service%20%2AExp%C3%A9riences%20Exclusives%20%26%20Acc%C3%A8s%20Priv%C3%A9s%2A.%20Pourriez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" class="btn-animated btn-animated-dark" style="font-size:10px;padding:10px 24px">
-          <span class="border-spin"></span><span class="border-inner"></span>Demander
-        </a>
+      <div class="box">
+        <span class="num">— 04 —</span>
+        <h4>Réseau international</h4>
       </div>
 
-      <!-- Service 5 -->
-      <div class="reveal reveal-delay-2 card-3d glass relative overflow-hidden p-8" style="border-radius:3px">
-        <div class="section-num">05</div>
-        <div class="mb-6" style="color:#9A9A9A">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M4 28c0-6.627 5.373-10 12-10s12 3.373 12 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.4"/></svg>
-        </div>
-        <h3 class="font-display text-[22px] mb-3">Service VIP 24/7</h3>
-        <p class="font-sans font-light text-[13px] text-[#a0a0a0] leading-relaxed mb-6">Rendez-vous shopping, références médicales, support linguistique, transport privé et toute demande personnelle traitée avec discrétion.</p>
-        <a href="https://wa.me/330662744394?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20service%20%2AVIP%2024/7%2A.%20Pourriez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" class="btn-animated btn-animated-dark" style="font-size:10px;padding:10px 24px">
-          <span class="border-spin"></span><span class="border-inner"></span>Demander
-        </a>
+      <div class="box">
+        <span class="num">— 05 —</span>
+        <h4>Service sur mesure</h4>
       </div>
 
-      <!-- Service 6 — highlight card -->
-      <div class="reveal reveal-delay-3 card-3d relative overflow-hidden p-8" style="border-radius:3px;background:linear-gradient(135deg,rgba(160,160,160,0.10) 0%,rgba(17,17,17,1) 100%);border:1px solid rgba(192,192,192,0.18)">
-        <div class="section-num" style="color:rgba(160,160,160,0.06)">06</div>
-        <div class="mb-6" style="color:#9A9A9A">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4v4M26.9 9.1l-2.8 2.8M28 20h-4M24.1 26.9l-2.8-2.8M16 28v-4M7.9 26.9l2.8-2.8M4 20h4M7.9 9.1l2.8 2.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="1.2"/></svg>
-        </div>
-        <h3 class="font-display text-[22px] mb-3">Demandes Sur Mesure</h3>
-        <p class="font-sans font-light text-[13px] text-[#a0a0a0] leading-relaxed mb-6">Aucune demande n'est trop extraordinaire. Notre réseau s'étend de Paris au monde entier — si c'est possible, nous le ferons.</p>
-        <a href="https://wa.me/330662744394?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20service%20%2ADemandes%20Sur%20Mesure%2A.%20Pourriez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" class="btn-animated" style="font-size:10px;padding:10px 24px">
-          <span class="border-spin"></span><span class="border-inner"></span>Parlons-en
-        </a>
+      <div class="box">
+        <span class="num">— 06 —</span>
+        <h4>Disponibilité permanente</h4>
       </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="img-section">
+  <div class="container-img">
+    <div class="image-frame">
+      <img src="cars.jpg" alt="Luxury image description">
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════ ABOUT ═══════════════════════════════════════ -->
-<section id="about" class="relative py-28 overflow-hidden" style="background:linear-gradient(180deg,#0d0d0d 0%,#0a0a0a 50%,#111111 100%)">
-  <div class="divider"></div>
+<!-- CONTACT FORM SECTION -->
+<section class="contact-section">
+  <div class="contact-form-wrapper">
 
-  <!-- SVG arcs -->
-  <svg class="svg-path" style="top:50%;right:5%;transform:translateY(-50%);width:300px;height:400px" viewBox="0 0 300 400" fill="none">
-    <ellipse cx="200" cy="200" rx="180" ry="180" stroke="#9A9A9A" stroke-width="0.8" stroke-dasharray="6 10" style="animation:march 25s linear infinite"/>
-    <ellipse cx="200" cy="200" rx="120" ry="120" stroke="#9A9A9A" stroke-width="0.6" stroke-dasharray="3 8" style="animation:march 18s linear infinite reverse"/>
-  </svg>
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-16 pt-20">
-    <div class="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
-      <!-- Left image -->
-      <div class="reveal relative order-2 lg:order-1">
-        <div class="relative" style="aspect-ratio:4/5;max-width:480px">
-          <img
-            src="apropos.png"
-            alt="Paris elegance"
-            class="w-full h-full object-cover"
-            style="border-radius:2px;filter:brightness(0.8) contrast(1.1)"
-          />
-          <!-- Gold trim -->
-          <div style="position:absolute;top:-12px;left:-12px;right:24px;bottom:24px;border:1px solid rgba(192,192,192,0.15);border-radius:2px;pointer-events:none"></div>
-          <!-- Floating stat -->
-          <div class="glass-gold absolute -right-10 bottom-16 px-7 py-5 text-center" style="border-radius:2px">
-            <div class="font-display gold-shimmer" style="font-size:36px">№1</div>
-            <div class="font-sans text-[9px] tracking-[0.28em] uppercase text-[#9A9A9A] mt-1">Paris Concierge</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right text -->
-      <div class="reveal order-1 lg:order-2">
-        <div class="inline-flex items-center gap-3 mb-6">
-          <div style="width:24px;height:1px;background:#9A9A9A"></div>
-          <span class="font-sans text-[10px] tracking-[0.38em] uppercase text-[#9A9A9A]">Notre Histoire</span>
-        </div>
-        <h2 class="font-display mb-6" style="font-size:clamp(28px,4vw,52px);line-height:1.1">
-          Née d'une<br><em class="font-serif not-italic gold-shimmer">Passion</em> Pour le Luxe
-        </h2>
-        <p class="font-sans font-light text-[14px] text-[#a0a0a0] leading-relaxed mb-5">
-          Basée à Paris, MBM Conciergerie accompagne une clientèle exigeante en offrant des services personnalisés, alliant discrétion, réactivité et excellence. 
-        </p>
-        <p class="font-sans font-light text-[14px] text-[#a0a0a0] leading-relaxed mb-8">
-          Grâce à un réseau privilégié, nous donnons accès à des expériences exclusives : mobilité de prestige, réservations dans les lieux les plus prisés, organisation de séjours sur mesure et sourcing de biens rares.
-        </p>
-        <p class="font-sans font-light text-[14px] text-[#a0a0a0] leading-relaxed mb-8">
-        Chaque demande est traitée avec précision et exigence, dans le but de dépasser vos attentes.
-        </p>
-
-        <div class="grid grid-cols-2 gap-6 mb-10">
-          <div>
-            <div class="font-sans text-[10px] tracking-[0.28em] uppercase text-[#9A9A9A] mb-1">Notre Mission</div>
-            <div class="font-serif text-[14px] italic text-[#FFFFFF] leading-relaxed">"Transformer l'inaccessible en évidence."</div>
-          </div>
-          <div>
-            <div class="font-sans text-[10px] tracking-[0.28em] uppercase text-[#9A9A9A] mb-1">Notre Promesse</div>
-            <div class="font-serif text-[14px] italic text-[#FFFFFF] leading-relaxed">"Discrétion absolue. Sans compromis."</div>
-          </div>
-        </div>
-
-        <!--<a href="#contact" class="btn-animated" style="padding:15px 38px;font-size:11px">
-          <span class="border-spin"></span><span class="border-inner"></span>
-          Meet the Team
-        </a>-->
-      </div>
-    </div>
-  </div>
-  <div class="divider mt-20"></div>
-</section>
-
-<!-- ═══════════════════════════════════════ HOW IT WORKS ═══════════════════════════════════════ -->
-<section id="process" class="relative py-28 overflow-hidden">
-  <!-- SVG dotted curve -->
-  <svg class="svg-path" style="bottom:0;left:0;width:100%;height:80px;opacity:0.10" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
-    <path d="M0,40 C200,0 400,80 600,40 C800,0 1000,80 1200,40 C1300,20 1380,50 1440,40" stroke="#9A9A9A" stroke-width="1.5" stroke-dasharray="6 8" fill="none"/>
-  </svg>
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-16">
-    <div class="reveal text-center mb-20">
-      <div class="inline-flex items-center gap-3 mb-5">
-        <div style="width:24px;height:1px;background:#9A9A9A"></div>
-        <span class="font-sans text-[10px] tracking-[0.38em] uppercase text-[#9A9A9A]">Le Processus</span>
-        <div style="width:24px;height:1px;background:#9A9A9A"></div>
-      </div>
-      <h2 class="font-display" style="font-size:clamp(32px,4.5vw,56px);line-height:1.1">
-        L'Excellence dès le <br><em class="font-serif not-italic gold-shimmer">Premier Contact</em>
-      </h2>
+    <!-- Section Header -->
+    <div class="section-header">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Demande <em>Privée</em></h2>
+      <div class="section-divider">
+        <span class="section-divider-line"></span>
+        <span class="section-divider-diamond"></span>
+        <span class="section-divider-line"></span>
+      </div><br>
+      <p class="intro-text-contact">Chaque demande est traitée avec la plus stricte confidentialité.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Step 1 -->
-      <div class="reveal card-3d glass relative overflow-hidden p-8" style="border-radius:3px">
-        <div class="section-num">01</div>
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-6" style="border:1px solid rgba(192,192,192,0.25);background:rgba(192,192,192,0.05)">
-          <span class="font-display text-[18px]" style="color:#9A9A9A">1</span>
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Nom</label>
+          <input type="text" class="form-input">
         </div>
-        <h3 class="font-display text-[20px] mb-3">Introduction Privée</h3>
-        <p class="font-sans font-light text-[12px] text-[#a0a0a0] leading-relaxed">Nous commençons par une rencontre confidentielle. Votre lifestyle manager prend le temps de comprendre vos préférences, vos ambitions et votre univers.</p>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input">
+        </div>
       </div>
 
-      <!-- Step 2 -->
-      <div class="reveal reveal-delay-1 card-3d glass relative overflow-hidden p-8" style="border-radius:3px">
-        <div class="section-num">02</div>
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-6" style="border:1px solid rgba(192,192,192,0.25);background:rgba(192,192,192,0.05)">
-          <span class="font-display text-[18px]" style="color:#9A9A9A">2</span>
+      <div class="form-row">
+        <div class="form-group full-width">
+          <label class="form-label">Téléphone</label>
+          <input type="tel" class="form-input">
         </div>
-        <h3 class="font-display text-[20px] mb-3">Plan Sur‑Mesure</h3>
-        <p class="font-sans font-light text-[12px] text-[#a0a0a0] leading-relaxed">Nous élaborons une proposition entièrement personnalisée — chaque détail est étudié, vérifié et recommandé avec soin pour répondre à vos attentes uniques.</p>
       </div>
 
-      <!-- Step 3 -->
-      <div class="reveal reveal-delay-2 card-3d glass relative overflow-hidden p-8" style="border-radius:3px">
-        <div class="section-num">03</div>
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-6" style="border:1px solid rgba(192,192,192,0.25);background:rgba(192,192,192,0.05)">
-          <span class="font-display text-[18px]" style="color:#9A9A9A">3</span>
+      <div class="form-row">
+        <div class="form-group full-width">
+          <label class="form-label">Message Confidentiel</label>
+          <textarea class="form-textarea" placeholder="Décrivez votre demande..."></textarea>
         </div>
-        <h3 class="font-display text-[20px] mb-3">Réalisation Parfaite</h3>
-        <p class="font-sans font-light text-[12px] text-[#a0a0a0] leading-relaxed">Grâce à notre réseau exclusif, nous orchestrons chaque réservation et chaque arrangement avec une précision irréprochable, pour un service fluide et sans compromis.</p>
       </div>
 
-      <!-- Step 4 -->
-      <div class="reveal reveal-delay-3 card-3d glass relative overflow-hidden p-8" style="border-radius:3px">
-        <div class="section-num">04</div>
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-6" style="border:1px solid rgba(192,192,192,0.25);background:rgba(192,192,192,0.05)">
-          <span class="font-display text-[18px]" style="color:#9A9A9A">4</span>
-        </div>
-        <h3 class="font-display text-[20px] mb-3">Relation Durable</h3>
-        <p class="font-sans font-light text-[12px] text-[#a0a0a0] leading-relaxed">Votre lifestyle manager reste à vos côtés, anticipant vos besoins et évoluant avec vous pour offrir un accompagnement constant et raffiné.</p>
+      <div class="form-footer">
+        <span class="form-note">Réponse sous 24h — 7j/7</span>
+        <button type="submit" class="submit-btn">Envoyer ma demande</button>
       </div>
-    </div>
+    </form>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════ TESTIMONIALS ═══════════════════════════════════════ -->
-<section id="testimonials" class="relative py-28 overflow-hidden" style="background:linear-gradient(180deg,#0d0d0d 0%,#0a0a0a 60%,#111111 100%)">
-  <div class="divider"></div>
-  <!-- Curved SVG -->
-  <svg class="svg-path" style="top:20%;left:-30px;width:260px;height:320px" viewBox="0 0 260 320" fill="none">
-    <path d="M20,10 C120,80 140,240 240,310" stroke="#9A9A9A" stroke-width="1" stroke-dasharray="5 9" class="path-animate" fill="none"/>
-  </svg>
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-16 pt-16">
-    <div class="reveal text-center mb-16">
-      <div class="inline-flex items-center gap-3 mb-5">
-        <div style="width:24px;height:1px;background:#9A9A9A"></div>
-        <span class="font-sans text-[10px] tracking-[0.38em] uppercase text-[#9A9A9A]">Témoignages Clients</span>
-        <div style="width:24px;height:1px;background:#9A9A9A"></div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">MBM</div>
+      <div class="footer-tagline">Conciergerie</div>
+      <div class="footer-separator">
+        <div class="footer-separator-line"></div>
+        <div class="footer-separator-diamond"></div>
+        <div class="footer-separator-line"></div>
       </div>
-      <h2 class="font-display" style="font-size:clamp(32px,4.5vw,56px);line-height:1.1">
-        Ce Que Nos Clients <em class="font-serif not-italic gold-shimmer">Disent</em>
-      </h2>
+      <div class="footer-motto">Discrétion — Excellence — Sérénité</div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Testimonial 1 -->
-      <div class="reveal card-3d glass-gold relative p-8" style="border-radius:3px">
-        <div class="stars text-sm mb-4">★★★★★</div>
-        <p class="font-serif text-[17px] italic text-[#FFFFFF] leading-relaxed mb-6">
-          "Une discrétion absolue et un sens du détail remarquable. MBM a transformé chacun de nos voyages en une expérience inoubliable."
-        </p>
-        <div style="height:1px;background:rgba(192,192,192,0.12);margin-bottom:20px"></div>
-        <div class="flex items-center gap-3">
-          <div>
-            <div class="font-sans text-[13px] font-medium text-[#C0C0C0]">Victoria R.</div>
-            <div class="font-sans text-[10px] text-[#6b6b6b] tracking-wide">London · Private Banker</div>
-          </div>
+    <div class="footer-info">
+      <div class="footer-col">
+        <div class="footer-col-title">Maison</div>
+        <div class="footer-col-text">
+          MBM Conciergerie<br>
+          Conciergerie Privée Internationale
         </div>
       </div>
-
-      <!-- Testimonial 2 - featured -->
-      <div class="reveal reveal-delay-1 card-3d relative p-8" style="border-radius:3px;background:linear-gradient(145deg,rgba(160,160,160,0.12),rgba(17,17,17,0.98));border:1px solid rgba(192,192,192,0.22)">
-        <div class="stars text-sm mb-4">★★★★★</div>
-        <p class="font-serif text-[17px] italic text-[#FFFFFF] leading-relaxed mb-6">
-          "Disponibles à toute heure, toujours une longueur d'avance. Ils anticipent nos besoins avant même que nous les exprimions."
-        </p>
-        <div style="height:1px;background:rgba(192,192,192,0.15);margin-bottom:20px"></div>
-        <div class="flex items-center gap-3">
-          
-          <div>
-            <div class="font-sans text-[13px] font-medium text-[#C0C0C0]">Alexandre M.</div>
-            <div class="font-sans text-[10px] text-[#6b6b6b] tracking-wide">Dubai · Entrepreneur</div>
-          </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact Privé</div>
+        <div class="footer-col-text">
+          <a href="mailto:contact.mbmconciergerie@gmail.com">contact.mbmconciergerie@gmail.com</a><br>
+          <a href="tel:+33662744394">+33 6 62 74 43 94</a><br>
+          Instagram : <a href="#">mbm.conciergerie</a>
         </div>
       </div>
-
-      <!-- Testimonial 3 -->
-      <div class="reveal reveal-delay-2 card-3d glass-gold relative p-8" style="border-radius:3px">
-        <div class="stars text-sm mb-4">★★★★★</div>
-        <p class="font-serif text-[17px] italic text-[#FFFFFF] leading-relaxed mb-6">
-          "Un accès à un univers que l'on croyait inaccessible. Chaque demande, même la plus singulière, trouve une réponse élégante."
-        </p>
-        <div style="height:1px;background:rgba(192,192,192,0.12);margin-bottom:20px"></div>
-        <div class="flex items-center gap-3">
-          
-          <div>
-            <div class="font-sans text-[13px] font-medium text-[#C0C0C0]">Sophia K.</div>
-            <div class="font-sans text-[10px] text-[#6b6b6b] tracking-wide">New York · Art Collector</div>
-          </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Présence</div>
+        <div class="footer-col-text">
+          International
         </div>
       </div>
     </div>
 
-    <!-- Quote accent -->
-    <div class="reveal text-center mt-16">
-      <div class="font-serif text-[18px] italic text-[#6b6b6b]">
-        "Nous ne satisfaisons pas simplement des demandes. Nous créons des souvenirs."
+    <div class="footer-bottom">
+      <div class="footer-copyright">© 2026 MBM Conciergerie — Tous droits réservés</div>
+      <div class="footer-links">
+        <a href="#">Confidentialité</a>
+        <span class="dot">·</span>
+        <a href="#">Mentions Légales</a>
       </div>
-      <!--<div class="font-sans text-[10px] tracking-[0.3em] uppercase text-[#9A9A9A] mt-3">— Isabelle Dumont, Founder</div>-->
-    </div>
-  </div>
-  <div class="divider mt-16"></div>
-</section>
-
-
-
-<!-- ═══════════════════════════════════════ CTA ═══════════════════════════════════════ -->
-<section id="contact" class="relative py-32 overflow-hidden" style="background:linear-gradient(160deg,#0a0a0a 0%,#111111 100%)">
-  <div class="divider mb-0"></div>
-
-  <!-- BG decoration -->
-  <div class="absolute inset-0 pointer-events-none">
-    <svg width="100%" height="100%" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="xMidYMid slice" class="opacity-5">
-      <circle cx="720" cy="300" r="400" stroke="#9A9A9A" stroke-width="1" stroke-dasharray="8 14"/>
-      <circle cx="720" cy="300" r="250" stroke="#9A9A9A" stroke-width="0.8" stroke-dasharray="5 10"/>
-      <circle cx="720" cy="300" r="120" stroke="#9A9A9A" stroke-width="0.6" stroke-dasharray="3 8"/>
-    </svg>
-  </div>
-
-  <div class="max-w-5xl mx-auto px-6 lg:px-16 relative">
-    <div class="reveal text-center mb-14">
-      <div class="inline-flex items-center gap-3 mb-6">
-        <div style="width:24px;height:1px;background:#9A9A9A"></div>
-        <span class="font-sans text-[10px] tracking-[0.38em] uppercase text-[#9A9A9A]">Commencez Votre Expérience</span>
-        <div style="width:24px;height:1px;background:#9A9A9A"></div>
-      </div>
-      <h2 class="font-display mb-6" style="font-size:clamp(34px,5.5vw,72px);line-height:1.05">
-        Votre monde Vous Attend.<br><em class="font-serif not-italic gold-shimmer">Commençons.</em>
-      </h2>
-      <p class="font-sans font-light text-[14px] text-[#6b6b6b] max-w-xl mx-auto leading-relaxed">
-        Planifiez une consultation confidentielle avec l'un de nos gestionnaires de lifestyle. Sans engagement. Une simple conversation sur ce que l'extraordinaire signifie pour vous.
-      </p>
-    </div>
-
-    <!-- Contact form -->
-    <div class="reveal glass p-10 lg:p-14" style="border-radius:3px;border:1px solid rgba(192,192,192,0.08)">
-      <div class="grid md:grid-cols-2 gap-6 mb-6">
-        <div>
-          <label class="font-sans text-[10px] tracking-[0.25em] uppercase text-[#9A9A9A] block mb-2">Nom</label>
-          <input type="text" placeholder="Isabelle">
-        </div>
-        <div>
-          <label class="font-sans text-[10px] tracking-[0.25em] uppercase text-[#9A9A9A] block mb-2">Prénom</label>
-          <input type="text" placeholder="Dumont">
-        </div>
-        <div>
-          <label class="font-sans text-[10px] tracking-[0.25em] uppercase text-[#9A9A9A] block mb-2">Email Address</label>
-          <input type="email" placeholder="you@domain.com">
-        </div>
-        <div>
-          <label class="font-sans text-[10px] tracking-[0.25em] uppercase text-[#9A9A9A] block mb-2">Téléphone (optional)</label>
-          <input type="tel" placeholder="+1 212 000 0000">
-        </div>
-      </div>
-      <div class="mb-6">
-        <label class="font-sans text-[10px] tracking-[0.25em] uppercase text-[#9A9A9A] block mb-2">Dites-en nous plus sur votre bésoin</label>
-        <textarea rows="4" placeholder="I am interested in..."></textarea>
-      </div>
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-        <p class="font-sans text-[11px] text-[#6b6b6b]">Vos informations sont conservées dans la plus stricte confidentialité.</p>
-        <button class="btn-animated" style="padding:16px 44px;font-size:11px;white-space:nowrap">
-          <span class="border-spin"></span><span class="border-inner"></span>
-          Envoyer une Requète
-        </button>
-      </div>
-    </div>
-
-    <!-- Alt contact -->
-    <div class="reveal grid grid-cols-3 gap-6 mt-10 text-center">
-      <div>
-        <div class="font-sans text-[10px] tracking-[0.28em] uppercase text-[#9A9A9A] mb-2">Call Us</div>
-        <div class="font-serif text-[16px] text-[#FFFFFF]">+33 06 62 74 43 94</div>
-      </div>
-      <div style="border-left:1px solid rgba(192,192,192,0.10);border-right:1px solid rgba(192,192,192,0.10)">
-        <div class="font-sans text-[10px] tracking-[0.28em] uppercase text-[#9A9A9A] mb-2">Email</div>
-        
-      </div>
-      <div>
-        <div class="font-sans text-[10px] tracking-[0.28em] uppercase text-[#9A9A9A] mb-2">Disponible</div>
-        <div class="font-serif text-[16px] text-[#FFFFFF]">24h · 7 days</div>
-      </div>
-    </div>
-  </div>
-  <div class="divider mt-16"></div>
-</section>
-
-<!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
-<footer class="relative py-16 overflow-hidden" style="background:#000000">
-  <!-- SVG footer wave -->
-  <svg class="svg-path" style="top:0;left:0;width:100%;height:60px;opacity:0.07" viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
-    <path d="M0,30 C240,0 480,60 720,30 C960,0 1200,60 1440,30" stroke="#9A9A9A" stroke-width="1.5" stroke-dasharray="6 10" fill="none"/>
-  </svg>
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-16">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
-      <!-- Brand -->
-      <div class="lg:col-span-1">
-        <div class="flex items-center gap-3 mb-5">
-          <span class="font-display text-[28px] tracking-[0.22em] text-white uppercase">MBM</span>
-        </div>
-        <p class="font-sans font-light text-[12px] text-[#6b6b6b] leading-relaxed mb-6">L'art de vivre, sublimé. Le service de conciergerie le plus exclusif de Paris.</p>
-        <div class="flex items-center gap-4">
-          <!-- Social icons -->
-          <a href="https://www.instagram.com/mbm.conciergerie" class="w-8 h-8 glass flex items-center justify-center hover:border-[rgba(160,160,160,0.4)] transition-colors" style="border-radius:2px">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a0a0a0" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#a0a0a0" stroke="none"/></svg>
-          </a>
-          <a href="https://wa.me/330662744394" target="_blank" class="w-8 h-8 glass flex items-center justify-center hover:border-[rgba(160,160,160,0.4)] transition-colors" style="border-radius:2px">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a0a0a0" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          </a>
-          <a href="mailto:contact.mbmconciergerie@gmail.com" class="w-8 h-8 glass flex items-center justify-center hover:border-[rgba(160,160,160,0.4)] transition-colors" style="border-radius:2px">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a0a0a0" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Services -->
-
-      <!-- Company -->
-      <div>
-        <div class="font-sans text-[10px] tracking-[0.32em] uppercase text-[#C0C0C0] mb-5">Entreprise</div>
-        <ul class="space-y-3">
-          <li><a href="#about" class="font-sans text-[12px] text-[#6b6b6b] hover:text-[#ffffff] transition-colors">A Propos</a></li>
-          <li><a href="#process" class="font-sans text-[12px] text-[#6b6b6b] hover:text-[#ffffff] transition-colors">Processus</a></li>
-        </ul>
-      </div>
-
-      <!-- Legal & Contact -->
-      <div>
-        <div class="font-sans text-[10px] tracking-[0.32em] uppercase text-[#C0C0C0] mb-5">Mentions Légales</div>
-        <ul class="space-y-3 mb-6">
-          <li><a href="#" class="font-sans text-[12px] text-[#6b6b6b] hover:text-[#ffffff] transition-colors">Politique de Confidentialité</a></li>
-          <li><a href="#" class="font-sans text-[12px] text-[#6b6b6b] hover:text-[#ffffff] transition-colors">Conditions Générales d'Utilisation</a></li>
-        </ul>
-        
-      </div>
-    </div>
-
-    <div class="divider mb-8"></div>
-
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="font-sans text-[11px] text-[#4b4b4b]">© 2026 MBM Conciergerie. Tous droits réservés.</div>
-      <div class="font-serif text-[12px] italic text-[#4b4b4b]">"L'art de vivre à la parisienne"</div>
-      <div class="font-sans text-[11px] text-[#4b4b4b]">Powered by DevTech 2.0</div>
     </div>
   </div>
 </footer>
 
-<!-- ═══════════════════════════════════════ SCRIPTS ═══════════════════════════════════════ -->
 <script>
-  // ── NAV scroll
+  // ── Splash Screen Auto-Hide ──
+  const splashScreen = document.getElementById('splash-screen');
+  
+  // Auto-hide splash after animation completes (~2.8s)
+  setTimeout(() => {
+    splashScreen.classList.add('done');
+    document.body.classList.remove('splash-active');
+  }, 2800);
+
+  // ── Scroll: add .scrolled class to navbar ──
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
-  // ── Mobile menu
-  document.getElementById('menu-btn').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-  document.querySelectorAll('#mobile-menu a').forEach(a => {
-    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
-  });
-
-  // ── Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // ── Counter animation
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.count, 10);
-    const suffix = target === 97 ? '%' : target >= 1000 ? '+' : (target > 100 ? '+' : '');
-    const displayTarget = target >= 1000 ? target : target;
-    let start = 0;
-    const duration = 1800;
-    const step = timestamp => {
-      if (!start) start = timestamp;
-      const progress = Math.min((timestamp - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(eased * displayTarget);
-      el.textContent = current >= 1000 ? (current >= 1000 ? Math.floor(current/100)*100 : current).toLocaleString() : current;
-      if (progress < 1) requestAnimationFrame(step);
-      else el.textContent = (target >= 1000 ? target.toLocaleString() : target) + suffix;
-    };
-    requestAnimationFrame(step);
-  }
-
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting && e.target.dataset.count) {
-        animateCounter(e.target);
-        counterObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
-
-  // ── FAQ toggle
-  function toggleFaq(btn) {
-    const body = btn.nextElementSibling;
-    const icon = btn.querySelector('.faq-icon');
-    const isOpen = body.classList.contains('open');
-    // Close all
-    document.querySelectorAll('.faq-body').forEach(b => b.classList.remove('open'));
-    document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
-    if (!isOpen) {
-      body.classList.add('open');
-      icon.classList.add('open');
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
     }
-  }
-
-  // ── 3D card tilt
-  document.querySelectorAll('.card-3d').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - 0.5;
-      const y = (e.clientY - r.top) / r.height - 0.5;
-      card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-4px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
   });
 
-  // ── Splash Screen ──
-document.body.classList.add('splash-active');
+  // ── Hamburger menu toggle ──
+  const hamburger    = document.getElementById('hamburger');
+  const mobileMenu   = document.getElementById('mobile-menu');
 
-setTimeout(() => {
-  const splash = document.getElementById('splash-screen');
-  if (splash) {
-    splash.classList.add('done');
-    document.body.classList.remove('splash-active');
-    
-    // Remove from DOM after transition to free memory
-    setTimeout(() => splash.remove(), 900);
-  }
-}, 2800); // ~2.8s total (not 4)
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    // Swap icon: lines → close X
+    const icon = hamburger.querySelector('i');
+    icon.className = isOpen ? 'ri-close-line' : 'ri-menu-3-fill';
+  });
+
+  // Close menu when a link is clicked
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.querySelector('i').className = 'ri-menu-3-fill';
+    });
+  });
 </script>
 </body>
 </html>
