@@ -1117,7 +1117,7 @@
 ============================================ */
 /* Wrapper that spans full width with the background */
 .destinations-wrapper {
-  background: var(--color-bg-mid);
+  background: var(--color-bg);
   width: 100%;
 }
  
