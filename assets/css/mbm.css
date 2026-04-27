@@ -1112,110 +1112,94 @@
     }
   }
   
-  /* ============================================
-   DESTINATIONS SECTION - WITH BACKGROUND IMAGE
-  ============================================ */
+/* ============================================
+   DESTINATIONS SECTION
+============================================ */
 /* Wrapper that spans full width with the background */
 .destinations-wrapper {
-    background: url('') center/cover no-repeat fixed;
-    position: relative;
-    width: 100%;
-  }
-  
-  /* Dark overlay */
-  .destinations-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.88);
-    z-index: 1;
-  }
-  
-  .destinations-section {
-    text-align: center;
-    padding: var(--section-padding-v) var(--section-padding-h);
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-  }
-  
-  /* Make city items have slight transparency to show background */
-  .cities-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    border: 1px solid var(--color-border-med);
-    margin-bottom: 56px;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
-  }
-  
+  background: var(--color-bg-mid);
+  width: 100%;
+}
+ 
+.destinations-section {
+  text-align: center;
+  padding: var(--section-padding-v) var(--section-padding-h);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+ 
+.intro-text {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  color: #999;
+  margin-bottom: 48px;
+}
+ 
+.cities-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid var(--color-border-med);
+  margin-bottom: 56px;
+}
+ 
+.city-item {
+  flex: 1;
+  min-width: 160px;
+  padding: 40px 24px;
+  border-right: 1px solid var(--color-border-med);
+  font-family: var(--font-serif-alt);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  transition: background-color var(--transition-base);
+  cursor: default;
+}
+ 
+.city-item:last-child {
+  border-right: none;
+}
+ 
+.city-item:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+ 
+.more-destinations {
+  font-family: var(--font-serif-alt);
+  font-size: 32px;
+  font-weight: 400;
+  font-style: italic;
+  color: #b8b8b8;
+  margin-bottom: 20px;
+}
+ 
+.closing-text {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+ 
+@media (max-width: 768px) {
   .city-item {
-    flex: 1;
-    min-width: 100px;
-    padding: 40px 24px;
-    border-right: 1px solid var(--color-border-med);
-    font-family: var(--font-serif-alt);
+    min-width: 140px;
+    padding: 30px 16px;
+    font-size: 22px;
+  }
+ 
+  .more-destinations {
     font-size: 26px;
-    font-weight: 400;
-    color: var(--color-text-secondary);
-    transition: background-color var(--transition-base), backdrop-filter var(--transition-base);
-    cursor: default;
-    background: rgba(0, 0, 0, 0.2);
   }
-  
-  .city-item:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-  }
-  
-  .city-item:last-child {
-    border-right: none;
-  }
-  
-  .intro-text,
-  .more-destinations,
-  .closing-text {
-    background: rgba(0, 0, 0, 0.3);
-    display: inline-block;
-    padding: 8px 20px;
-    border-radius: 0;
-    backdrop-filter: blur(2px);
-  }
-  
-  .intro-text-contact
-   {
-   
-    display: inline-block;
-    padding: 8px 20px;
-    border-radius: 0;
-    backdrop-filter: blur(2px);
-  }
+}
+ 
 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .private-access-card {
-      padding: 50px 28px;
-    }
-    
-    .private-access-card .section-title {
-      font-size: 38px;
-    }
-    
-    .city-item {
-      min-width: 140px;
-      padding: 30px 16px;
-      font-size: 22px;
-    }
-    
-    .destinations-section {
-      padding: 60px 20px;
-    }
-  }
   
   @media (max-width: 600px) {
     .private-access-card {
