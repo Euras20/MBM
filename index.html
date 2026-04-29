@@ -1,106 +1,246 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MBM Conciergerie</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-  <!-- Remix Icons for hamburger and UI icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/mbm.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>MBM Conciergerie — Service Privé International | Conciergerie de Luxe</title>
+    <meta name="title" content="MBM Conciergerie — Service Privé International | Conciergerie de Luxe">
+    <meta name="description" content="MBM Conciergerie offre des services privés internationaux de luxe : gestion de propriétés, réservations exclusives, voyages sur mesure et assistance personnelle 24/7.">
+    <meta name="keywords" content="conciergerie luxe, service privé international, conciergerie haut de gamme, gestion propriété luxe, assistant personnel, réservation exclusive, voyage sur mesure, conciergerie France, service VIP">
+    <meta name="author" content="MBM Conciergerie">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="French">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://mbm-conciergerie.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://mbm-conciergerie.com">
+    <meta property="og:title" content="MBM Conciergerie — Service Privé International">
+    <meta property="og:description" content="Services de conciergerie de luxe internationaux. Gestion de propriétés, réservations exclusives et assistance personnelle 24/7.">
+    <meta property="og:image" content="https://mbm-conciergerie.com/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="MBM Conciergerie">
+    <meta property="business:contact_data:locality" content="Paris">
+    <meta property="business:contact_data:country_name" content="France">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mbm-conciergerie.com">
+    <meta name="twitter:title" content="MBM Conciergerie — Service Privé International">
+    <meta name="twitter:description" content="Découvrez nos services de conciergerie de luxe : gestion de propriétés, réservations exclusives et assistance personnelle.">
+    <meta name="twitter:image" content="https://mbm-conciergerie.com/img/og-image.jpg">
+    
+    <!-- Local Business Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MBM Conciergerie",
+      "image": "https://mbm-conciergerie.com/img/logo.png",
+      "@id": "https://mbm-conciergerie.com",
+      "url": "https://mbm-conciergerie.com",
+      "telephone": "+33662744394",
+      "email": "contact.mbmconciergerie@gmail.com",
+      "description": "Services privés internationaux de conciergerie de luxe : gestion de propriétés, réservations exclusives, voyages sur mesure et assistance personnelle 24/7.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Adresse de votre siège",
+        "addressLocality": "Paris",
+        "postalCode": "75008",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8566,
+        "longitude": 2.3522
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "€€€€",
+      "sameAs": [
+        "https://facebook.com/mbmconciergerie",
+        "https://instagram.com/mbmconciergerie",
+        "https://linkedin.com/company/mbm-conciergerie"
+      ]
+    }
+    </script>
+    
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Conciergerie de Luxe",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "MBM Conciergerie"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "International"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services de Conciergerie",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gestion de Propriétés de Luxe"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Réservations Exclusives"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Voyages Sur Mesure"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Assistance Personnelle 24/7"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- Mobile App Meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MBM Conciergerie">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="msapplication-TileColor" content="#1a1a1a">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
+<base target="_blank">
 <body class="splash-active">
 
-  
-  <!-- ═══════════════════════════════════════ SPLASH SCREEN ═══════════════════════════════════════ -->
+<!-- SPLASH SCREEN -->
 <div id="splash-screen">
   <div class="splash-inner">
-    <!-- MBM Monogram -->
     <div class="splash-mbm">
       <div class="splash-mbm-text">MBM</div>
       <span>Conciergerie</span>
     </div>
-    
-    <!-- Reveal mask container -->
     <div class="splash-reveal-mask">
       <div class="splash-reveal-line"></div>
       <div class="splash-reveal-text">
         <span>Service</span>
-        <span>Privée</span>
-        <span>de luxe</span>
+        <span>Privé</span>
+        <span>de Luxe</span>
       </div>
     </div>
   </div>
-  
-  <!-- Progress bar at bottom -->
   <div class="splash-progress">
     <div class="splash-progress-bar"></div>
   </div>
 </div>
 
+<!-- NAVBAR -->
 <header class="navbar" id="navbar">
-  <div class="logo">
+  <a href="#" class="logo">
     <span class="logo-main">MBM</span>
-    <span class="logo-sub">CONCIERGERIE</span>
-  </div>
-
+    <span class="logo-sub">Conciergerie</span>
+  </a>
   <nav>
-    <a href="#">Services</a>
-    <a href="#">Off Market</a>
-    <a href="#">International</a>
-    <a href="#">Signature</a>
-    <a href="#">Contact</a>
+    <a href="#services">Services</a>
+    <a href="#offmarket">Off Market</a>
+    <a href="#international">International</a>
+    <a href="#signature">Signature</a>
+    <a href="#contact">Contact</a>
   </nav>
-
-  <a href="#" class="btn-outline">DEMANDE PRIVÉE</a>
-
-  <!-- Hamburger button (mobile only) -->
+  <a href="#contact" class="btn-outline">Demande Privée</a>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <i class="ri-menu-3-fill"></i>
   </button>
 </header>
 
-<!-- Mobile dropdown menu -->
+<!-- MOBILE MENU -->
 <nav class="mobile-menu" id="mobile-menu">
-  <a href="#">Services</a>
-  <a href="#">Off Market</a>
-  <a href="#">International</a>
-  <a href="#">Signature</a>
-  <a href="#">Contact</a>
-  <a href="#" class="btn-mobile" style="letter-spacing:3px;">DEMANDE PRIVÉE</a>
+  <a href="#services">Services</a>
+  <a href="#offmarket">Off Market</a>
+  <a href="#international">International</a>
+  <a href="#signature">Signature</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" style="letter-spacing:3px;color:var(--silver-light)">Demande Privée</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
+  <div class="hero-bg-parallax" id="hero-parallax"></div>
   <div class="overlay"></div>
-
   <div class="hero-content">
     <p class="subtitle">Conciergerie privée internationale</p>
-
     <h1>MBM <em>Conciergerie</em></h1>
-    <div class="section-divider">
+    <div class="section-divider" style="margin-top:24px;">
       <span class="section-divider-line"></span>
       <span class="section-divider-diamond"></span>
       <span class="section-divider-line"></span>
-    </div><br>
-
+    </div>
     <p class="tagline">Un accès privilégié à l'exceptionnel.</p>
-
-    <p class="description">
-      MBM Conciergerie accompagne une clientèle internationale exigeante dans
-      l'organisation, l'accès et la gestion de prestations exclusives à travers
-      le monde. Chaque demande est traitée avec discrétion absolue et efficacité.
-    </p>
-
-    <a href="#" class="btn-primary">ACCÉDER À VOTRE SERVICE PRIVÉ</a>
-
+    <p class="description">MBM Conciergerie accompagne une clientèle internationale exigeante dans l'organisation, l'accès et la gestion de prestations exclusives à travers le monde. Chaque demande est traitée avec discrétion absolue et efficacité.</p>
+    <a href="https://wa.me/330662744394?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20service%20de%20conciergerie.%20Pourriez-vous%20m%27en%20dire%20plus%20%3F" class="btn-primary">Accéder à votre service privé</a>
+  </div>
+  <div class="scroll-indicator">
+    <span>Découvrir</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
 <!-- SERVICES SECTION -->
-<section class="services">
-  
-  <!-- Section Header -->
-  <div class="section-header">
+<section class="services" id="services">
+  <div class="section-header reveal">
     <p class="section-label">Prestations</p>
     <h2 class="section-title">Prestations <em>Signature</em></h2>
     <div class="section-divider">
@@ -111,117 +251,100 @@
   </div>
 
   <div class="grid">
-
-    <div class="card">
+    <div class="card reveal" data-delay="1">
       <span class="index">0I</span>
       <h3>Aviation Privée</h3>
       <p>Location de jet privé sur tous continents.</p>
       <div class="line"></div>
     </div>
-
-    <div class="card">
+    <div class="card reveal" data-delay="2">
       <span class="index">02</span>
       <h3>Villas de Prestige</h3>
       <p>Demeures d'exception sélectionnées avec rigueur.</p>
       <div class="line"></div>
     </div>
-
-    <div class="card">
+    <div class="card reveal" data-delay="3">
       <span class="index">03</span>
       <h3>Véhicules d'Exception</h3>
       <p>Chauffeur privé. Rolls-Royce, Lamborghini, Bentley.</p>
       <div class="line"></div>
     </div>
-
-    <div class="card">
+    <div class="card reveal" data-delay="4">
       <span class="index">04</span>
       <h3>Séjours sur Mesure</h3>
       <p>Itinéraires confidentiels orchestrés à la perfection.</p>
       <div class="line"></div>
     </div>
-
-    <div class="card">
+    <div class="card reveal" data-delay="1">
       <span class="index">05</span>
       <h3>Accès Événements Privés</h3>
       <p>Soirées, courses, ventes, défilés — par invitation.</p>
       <div class="line"></div>
     </div>
-
-    <div class="card">
+    <div class="card reveal" data-delay="2">
       <span class="index">06</span>
       <h3>Réservations Exclusives</h3>
       <p>Tables, suites, expériences — dernière minute.</p>
       <div class="line"></div>
     </div>
-
-    <div class="card">
+    <div class="card reveal" data-delay="3">
       <span class="index">07</span>
       <h3>Expériences Rares</h3>
       <p>L'inaccessible, organisé sans compromis.</p>
       <div class="line"></div>
     </div>
-
-    <div class="card">
+    <div class="card reveal" data-delay="4">
       <span class="index">08</span>
       <h3>Demandes Personnelles</h3>
       <p>Gestion confidentielle de vos requêtes les plus singulières.</p>
       <div class="line"></div>
     </div>
-
   </div>
 </section>
 
 <!-- PHILOSOPHY SECTION -->
 <section class="philosophy-section">
-  <div class="image-side">
+  <div class="image-side reveal-left">
     <div class="image-border">
-      <img src="villa-CXHtPJSh.jpg" alt="Luxury modern villa with pool at night">
+      <img src="villa-CXHtPJSh.jpg" alt="Villa de prestige — MBM Conciergerie">
     </div>
   </div>
-  <div class="text-side">
+  <div class="text-side reveal-right">
     <p class="section-label">Philosophie</p>
     <h2 class="section-title">Un service <em>sans limite</em></h2>
-
     <div class="section-divider">
       <span class="section-divider-line"></span>
       <span class="section-divider-diamond"></span>
       <span class="section-divider-line"></span>
     </div>
-
     <p class="description">MBM Conciergerie répond aux demandes les plus exigeantes avec une approche entièrement personnalisée.</p>
-
     <p class="description">Nous agissons comme partenaire discret de votre quotidien et facilitateur d'accès à <em>l'inaccessible</em>.</p>
-
     <p class="quote">« Nous nous occupons de tout. Absolument tout. »</p>
   </div>
 </section>
 
 <!-- PRIVATE ACCESS (OFF MARKET) SECTION -->
-<section class="private-access-section">
+<section class="private-access-section" id="offmarket">
   <div class="private-access-overlay"></div>
-  <div class="private-access-card">
+  <div class="private-access-card reveal">
     <p class="section-label">Confidentiel · Sur invitation</p>
     <h2 class="section-title">Accès Privé — <em>Off Market</em></h2>
-    
     <div class="section-divider">
       <span class="section-divider-line"></span>
       <span class="section-divider-diamond"></span>
       <span class="section-divider-line"></span>
     </div>
-    
     <p class="description">Certaines opportunités sont uniquement accessibles sur demande confidentielle.</p>
-    
     <ul class="services-list">
       <li>Montres de collection — Rolex, Audemars Piguet, Patek Philippe</li>
-      <li>Villas</li>
+      <li>Villas de prestige</li>
       <li>Hôtels particuliers</li>
       <li>Biens d'exception confidentiels</li>
       <li>Objets rares & pièces de collection</li>
     </ul>
-    
     <div class="bottom-section">
       <p class="bottom-label">Accès réservé aux membres<br>validés</p>
-      <a href="#" class="cta-button">
+      <a href="mailto:contact.mbmconciergerie@gmail.com?subject=Demande%20Confidentielle%20%E2%80%94%20Acc%C3%A8s%20Off%20Market&body=Bonjour%20MBM%20Conciergerie%2C%0A%0AJe%20souhaite%20faire%20une%20demande%20confidentielle%20pour%20acc%C3%A9der%20%C3%A0%20vos%20opportunit%C3%A9s%20Off%20Market.%0A%0AVoici%20quelques%20pr%C3%A9cisions%20sur%20ma%20recherche%20%3A%0A%E2%80%A2%20Type%20de%20bien%20ou%20objet%20recherch%C3%A9%20%3A%20%0A%E2%80%A2%20Budget%20approximatif%20%3A%20%0A%E2%80%A2%20Localisation%20souhait%C3%A9e%20%3A%20%0A%E2%80%A2%20D%C3%A9lai%20souhait%C3%A9%20%3A%20%0A%0AJe%20comprends%20que%20cet%20acc%C3%A8s%20est%20soumis%20%C3%A0%20validation.%0A%0ACordialement%2C%0A%0A%5BVotre%20Nom%5D%0A%5BVotre%20T%C3%A9l%C3%A9phone%5D%0A%5BVotre%20Email%5D" class="cta-button">
         <span class="cta-text">Faire une demande<br>confidentielle</span>
         <span class="cta-line"></span>
       </a>
@@ -229,13 +352,11 @@
   </div>
 </section>
 
-<!-- DESTINATIONS SECTION — wrapper for full-width background -->
+<!-- DESTINATIONS SECTION -->
 <div class="destinations-wrapper">
   <div class="destinations-overlay"></div>
-  <section class="destinations-section">
-
-    <!-- Section Header -->
-    <div class="section-header">
+  <section class="destinations-section" id="international">
+    <div class="section-header reveal">
       <p class="section-label">International</p>
       <h2 class="section-title">Présence <em>Internationale</em></h2>
       <div class="section-divider">
@@ -244,10 +365,8 @@
         <span class="section-divider-line"></span>
       </div>
     </div>
-
-    <p class="intro-text">Nous accompagnons nos clients à travers les capitales du luxe.</p>
-    
-    <div class="cities-grid">
+    <p class="intro-text reveal">Nous accompagnons nos clients à travers les capitales du luxe.</p>
+    <div class="cities-grid reveal">
       <div class="city-item">Monaco</div>
       <div class="city-item">Paris</div>
       <div class="city-item">Londres</div>
@@ -255,18 +374,15 @@
       <div class="city-item">Genève</div>
       <div class="city-item">Saint-Tropez</div>
     </div>
-    
-    <p class="more-destinations">... et bien d'autres destinations.</p>
-    <p class="closing-text">Nous intervenons partout dans le monde, selon vos besoins et vos déplacements.</p>
+    <p class="more-destinations reveal">... et bien d'autres destinations.</p>
+    <p class="closing-text reveal">Nous intervenons partout dans le monde, selon vos besoins et vos déplacements.</p>
   </section>
 </div>
 
 <!-- TESTIMONIALS SECTION -->
 <section class="testimonials-section">
   <div class="container">
-
-    <!-- Section Header -->
-    <div class="section-header">
+    <div class="section-header reveal">
       <p class="section-label">Témoignages</p>
       <h2 class="section-title">Retour de <em>nos clients</em></h2>
       <div class="section-divider">
@@ -276,64 +392,61 @@
       </div>
     </div>
 
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <span class="quote-mark">"</span>
-        <p class="quote-text">Service irréprochable. Une discrétion exceptionnelle et une efficacité rare.</p>
-        <div class="testimonial-divider"></div>
-        <div class="author-name">Alexandre R.</div>
-        <div class="author-location">Paris</div>
-      </div>
-
-      <div class="testimonial-card">
-        <span class="quote-mark">"</span>
-        <p class="quote-text">Une équipe capable de rendre possible l'impossible.</p>
-        <div class="testimonial-divider"></div>
-        <div class="author-name">Charlotte M.</div>
-        <div class="author-location">Paris</div>
-      </div>
-
-      <div class="testimonial-card">
-        <span class="quote-mark">"</span>
-        <p class="quote-text">MBM Concierge delivers an extraordinary level of access and precision.</p>
-        <div class="testimonial-divider"></div>
-        <div class="author-name">Edward L.</div>
-        <div class="author-location">Londres</div>
-      </div>
-
-      <div class="testimonial-card">
-        <span class="quote-mark">"</span>
-        <p class="quote-text">Un accompagnement sur mesure digne des plus grandes maisons.</p>
-        <div class="testimonial-divider"></div>
-        <div class="author-name">Marc D.</div>
-        <div class="author-location">Genève</div>
-      </div>
-
-      <div class="testimonial-card">
-        <span class="quote-mark">"</span>
-        <p class="quote-text">Une expérience fluide, élégante et parfaitement exécutée.</p>
-        <div class="testimonial-divider"></div>
-        <div class="author-name">Sofia A.</div>
-        <div class="author-location">Paris</div>
-      </div>
-
-      <div class="testimonial-card">
-        <span class="quote-mark">"</span>
-        <p class="quote-text">Une maison d'exception, toujours à l'écoute et d'une efficacité rare.</p>
-        <div class="testimonial-divider"></div>
-        <div class="author-name">Julien B.</div>
-        <div class="author-location">Paris</div>
+    <div class="testimonials-carousel reveal">
+      <div class="testimonials-track" id="testimonials-track">
+        <div class="testimonial-card">
+          <span class="quote-mark">"</span>
+          <p class="quote-text">Service irréprochable. Une discrétion exceptionnelle et une efficacité rare.</p>
+          <div class="testimonial-divider"></div>
+          <div class="author-name">Alexandre R.</div>
+          <div class="author-location">Paris</div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark">"</span>
+          <p class="quote-text">Une équipe capable de rendre possible l'impossible.</p>
+          <div class="testimonial-divider"></div>
+          <div class="author-name">Charlotte M.</div>
+          <div class="author-location">Paris</div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark">"</span>
+          <p class="quote-text">MBM Concierge delivers an extraordinary level of access and precision.</p>
+          <div class="testimonial-divider"></div>
+          <div class="author-name">Edward L.</div>
+          <div class="author-location">Londres</div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark">"</span>
+          <p class="quote-text">Un accompagnement sur mesure digne des plus grandes maisons.</p>
+          <div class="testimonial-divider"></div>
+          <div class="author-name">Marc D.</div>
+          <div class="author-location">Genève</div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark">"</span>
+          <p class="quote-text">Une expérience fluide, élégante et parfaitement exécutée.</p>
+          <div class="testimonial-divider"></div>
+          <div class="author-name">Sofia A.</div>
+          <div class="author-location">Paris</div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark">"</span>
+          <p class="quote-text">Une maison d'exception, toujours à l'écoute et d'une efficacité rare.</p>
+          <div class="testimonial-divider"></div>
+          <div class="author-name">Julien B.</div>
+          <div class="author-location">Paris</div>
+        </div>
       </div>
     </div>
+
+
   </div>
 </section>
 
 <!-- SIGNATURE SECTION -->
-<section class="signature">
+<section class="signature" id="signature">
   <div class="signature-container">
-
-    <!-- LEFT — section-header is left-aligned via CSS -->
-    <div class="signature-left">
+    <div class="signature-left reveal-left">
       <div class="section-header">
         <p class="section-label">Notre Maison</p>
         <h2 class="section-title">Notre <em>Signature</em></h2>
@@ -344,63 +457,49 @@
         </div>
       </div>
       <p class="italic">L'art du service personnalisé.</p>
-
-      <p class="tags">
-        DISCRÉTION — EXCELLENCE — SÉRÉNITÉ
-      </p>
+      <p class="tags">Discrétion — Excellence — Sérénité</p>
     </div>
-
-    <!-- RIGHT -->
-    <div class="signature-grid">
-
+    <div class="signature-grid reveal-right">
       <div class="box">
         <span class="num">— 01 —</span>
         <h4>Discrétion absolue</h4>
       </div>
-
       <div class="box">
         <span class="num">— 02 —</span>
         <h4>Excellence opérationnelle</h4>
       </div>
-
       <div class="box">
         <span class="num">— 03 —</span>
         <h4>Accès privilégié</h4>
       </div>
-
       <div class="box">
         <span class="num">— 04 —</span>
         <h4>Réseau international</h4>
       </div>
-
       <div class="box">
         <span class="num">— 05 —</span>
         <h4>Service sur mesure</h4>
       </div>
-
       <div class="box">
         <span class="num">— 06 —</span>
         <h4>Disponibilité permanente</h4>
       </div>
-
     </div>
-
   </div>
 </section>
 
+<!-- IMG SECTION -->
 <section class="img-section">
   <div class="container-img">
     <div class="image-frame">
-      <img src="cars.jpg" alt="Luxury image description">
+      <img src="cars.jpg" alt="Véhicules d'exception — MBM Conciergerie">
     </div>
   </div>
 </section>
 
 <!-- CONTACT FORM SECTION -->
-<section class="contact-section">
-  <div class="contact-form-wrapper">
-
-    <!-- Section Header -->
+<section class="contact-section" id="contact">
+  <div class="contact-form-wrapper reveal">
     <div class="section-header">
       <p class="section-label">Contact</p>
       <h2 class="section-title">Demande <em>Privée</em></h2>
@@ -408,39 +507,38 @@
         <span class="section-divider-line"></span>
         <span class="section-divider-diamond"></span>
         <span class="section-divider-line"></span>
-      </div><br>
+      </div>
       <p class="intro-text-contact">Chaque demande est traitée avec la plus stricte confidentialité.</p>
     </div>
 
-    <form>
+    <form id="contactForm" novalidate>
       <div class="form-row">
         <div class="form-group">
-          <label class="form-label">Nom</label>
-          <input type="text" class="form-input">
+          <label class="form-label" for="formName">Nom</label>
+          <input type="text" id="formName" name="name" class="form-input" placeholder="Votre nom" required>
         </div>
         <div class="form-group">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-input">
+          <label class="form-label" for="formEmail">Email</label>
+          <input type="email" id="formEmail" name="email" class="form-input" placeholder="votre@email.com" required>
         </div>
       </div>
-
       <div class="form-row">
         <div class="form-group full-width">
-          <label class="form-label">Téléphone</label>
-          <input type="tel" class="form-input">
+          <label class="form-label" for="formPhone">Téléphone</label>
+          <input type="tel" id="formPhone" name="phone" class="form-input" placeholder="+33 · · · · · · · · ·" required>
         </div>
       </div>
-
       <div class="form-row">
         <div class="form-group full-width">
-          <label class="form-label">Message Confidentiel</label>
-          <textarea class="form-textarea" placeholder="Décrivez votre demande..."></textarea>
+          <label class="form-label" for="formMessage">Message Confidentiel</label>
+          <textarea id="formMessage" name="message" class="form-textarea" placeholder="Décrivez votre demande en toute confidentialité..." required></textarea>
         </div>
       </div>
-
       <div class="form-footer">
         <span class="form-note">Réponse sous 24h — 7j/7</span>
-        <button type="submit" class="submit-btn">Envoyer ma demande</button>
+        <button type="submit" class="submit-btn">
+          <span>Envoyer ma demande</span>
+        </button>
       </div>
     </form>
   </div>
@@ -451,7 +549,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">MBM</div>
-      <div class="footer-tagline">Conciergerie</div>
+      <div class="footer-tagline">Conciergerie Privée Internationale</div>
       <div class="footer-separator">
         <div class="footer-separator-line"></div>
         <div class="footer-separator-diamond"></div>
@@ -478,61 +576,113 @@
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Présence</div>
-        <div class="footer-col-text">
-          International
-        </div>
+        <div class="footer-col-text">International</div>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="footer-copyright">© 2026 MBM Conciergerie — Tous droits réservés</div>
       <div class="footer-links">
-        <a href="#">Confidentialité</a>
+        <a href="confidentialité.html">Confidentialité</a>
         <span class="dot">·</span>
-        <a href="#">Mentions Légales</a>
+        <a href="confidentialité.html">Mentions Légales</a>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-  // ── Splash Screen Auto-Hide ──
-  const splashScreen = document.getElementById('splash-screen');
-  
-  // Auto-hide splash after animation completes (~2.8s)
-  setTimeout(() => {
-    splashScreen.classList.add('done');
-    document.body.classList.remove('splash-active');
-  }, 2800);
+/* ── Splash Screen ── */
+const splashScreen = document.getElementById('splash-screen');
+setTimeout(() => {
+  splashScreen.classList.add('done');
+  document.body.classList.remove('splash-active');
+}, 3000);
 
-  // ── Scroll: add .scrolled class to navbar ──
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+/* ── Navbar scroll ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ── Hamburger ── */
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.querySelector('i').className = isOpen ? 'ri-close-line' : 'ri-menu-3-fill';
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.querySelector('i').className = 'ri-menu-3-fill';
+  });
+});
+
+/* ── Hero Parallax ── */
+const heroParallax = document.getElementById('hero-parallax');
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if (scrollY < window.innerHeight) {
+    heroParallax.style.transform = `translateY(${scrollY * 0.3}px)`;
+  }
+}, { passive: true });
+
+/* ── Scroll Reveal ── */
+const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
     }
   });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-  // ── Hamburger menu toggle ──
-  const hamburger    = document.getElementById('hamburger');
-  const mobileMenu   = document.getElementById('mobile-menu');
+reveals.forEach(el => revealObserver.observe(el));
 
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    // Swap icon: lines → close X
-    const icon = hamburger.querySelector('i');
-    icon.className = isOpen ? 'ri-close-line' : 'ri-menu-3-fill';
+/* ── Smooth anchor scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
+});
 
-  // Close menu when a link is clicked
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.querySelector('i').className = 'ri-menu-3-fill';
-    });
-  });
+/* ── Contact Form → Mailto ── */
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('formName').value.trim();
+  const email = document.getElementById('formEmail').value.trim();
+  const phone = document.getElementById('formPhone').value.trim();
+  const message = document.getElementById('formMessage').value.trim();
+  
+  if (!name || !email || !phone || !message) {
+    alert('Veuillez remplir tous les champs du formulaire.');
+    return;
+  }
+  
+  const subject = encodeURIComponent('Demande Privée — MBM Conciergerie');
+  const body = encodeURIComponent(
+    `Bonjour MBM Conciergerie,\n\n` +
+    `Je souhaite vous soumettre une demande privée. Voici mes coordonnées :\n\n` +
+    `Nom : ${name}\n` +
+    `Email : ${email}\n` +
+    `Téléphone : ${phone}\n\n` +
+    `Message confidentiel :\n` +
+    `─────────────────────\n` +
+    `${message}\n` +
+    `─────────────────────\n\n` +
+    `Cordialement,\n${name}`
+  );
+  
+  window.location.href = `mailto:contact.mbmconciergerie@gmail.com?subject=${subject}&body=${body}`;
+});
 </script>
 </body>
 </html>
