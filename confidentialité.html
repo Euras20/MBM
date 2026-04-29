@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBM Conciergerie — Mentions Légales & Confidentialité</title>
+    <meta name="description" content="Mentions légales et politique de confidentialité de MBM Conciergerie. Conformité RGPD, protection des données et informations légales.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://mbm-conciergerie.com/legal">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <style>
+        /* ========== GLOBAL STYLES (consistent with main site) ========== */
+        :root {
+            --color-bg: #050505;
+            --color-bg-alt: #080808;
+            --color-bg-mid: #0b0b0b;
+            --color-border: rgba(255,255,255,0.07);
+            --color-border-solid: #1a1a1a;
+            --color-border-med: #2a2a2a;
+            --color-text-primary: #f0ede8;
+            --color-text-secondary: #c8c4bc;
+            --color-text-muted: #9a9590;
+            --color-text-dim: #6e6a64;
+            --color-text-faint: #4a4640;
+            --silver: #b0b0b0;
+            --silver-light: #d0d0d0;
+            --silver-dim: #888888;
+            --font-serif: 'Cormorant', serif;
+            --font-serif-alt: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --navbar-height: 80px;
+            --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-bg);
+            color: var(--color-text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 0 64px;
+            height: var(--navbar-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(5,5,5,0.94);
+            border-bottom: 1px solid rgba(176,176,176,0.12);
+            backdrop-filter: blur(18px);
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            font-family: var(--font-serif);
+        }
+        .logo-main {
+            font-size: 20px;
+            letter-spacing: 4px;
+            color: var(--color-text-primary);
+            font-weight: 300;
+        }
+        .logo-sub {
+            font-size: 8px;
+            font-family: var(--font-sans);
+            letter-spacing: 5px;
+            color: var(--silver-dim);
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+        nav {
+            display: flex;
+            gap: 36px;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--color-text-muted);
+            font-size: 12px;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            transition: color var(--transition-base);
+        }
+        nav a:hover { color: var(--color-text-primary); }
+        .btn-outline {
+            border: 1px solid rgba(176,176,176,0.3);
+            padding: 14px 30px;
+            text-decoration: none;
+            color: var(--silver-light);
+            font-size: 9px;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-outline::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--silver);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+        .btn-outline:hover { color: #000; border-color: var(--silver); }
+        .btn-outline:hover::before { transform: scaleX(1); }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-text-secondary);
+            font-size: 22px;
+            cursor: pointer;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: var(--navbar-height);
+            left: 0;
+            width: 100%;
+            background: rgba(5,5,5,0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(176,176,176,0.12);
+            padding: 24px;
+            z-index: 999;
+            flex-direction: column;
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            pointer-events: none;
+        }
+        .mobile-menu.open {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--color-text-muted);
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        /* ========== HERO MINI ========== */
+        .legal-hero {
+            height: 38vh;
+            min-height: 280px;
+            background: linear-gradient(135deg, #080808 0%, #030303 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: var(--navbar-height);
+            border-bottom: 1px solid var(--color-border-med);
+            position: relative;
+        }
+        .legal-hero-content h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(44px, 6vw, 72px);
+            font-weight: 300;
+            letter-spacing: -0.01em;
+            color: var(--color-text-primary);
+        }
+        .legal-hero-content h1 em {
+            font-style: italic;
+            color: var(--silver-light);
+        }
+        .legal-hero-content p {
+            color: var(--color-text-muted);
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 16px;
+        }
+
+        /* ========== LEGAL CONTENT ========== */
+        .legal-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 40px 120px;
+        }
+        .legal-section {
+            margin-bottom: 70px;
+            scroll-margin-top: 100px;
+        }
+        .legal-section h2 {
+            font-family: var(--font-serif-alt);
+            font-size: 32px;
+            font-weight: 400;
+            color: var(--color-text-secondary);
+            border-left: 3px solid var(--silver);
+            padding-left: 20px;
+            margin-bottom: 36px;
+            letter-spacing: -0.3px;
+        }
+        .legal-section h3 {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 400;
+            margin: 28px 0 16px 0;
+            color: var(--silver-light);
+        }
+        .legal-section p, .legal-section li {
+            font-size: 15px;
+            line-height: 1.85;
+            color: var(--color-text-muted);
+            margin-bottom: 18px;
+            font-weight: 300;
+        }
+        .legal-section strong {
+            color: var(--silver-light);
+            font-weight: 500;
+        }
+        .legal-section ul, .legal-section ol {
+            margin: 20px 0 20px 30px;
+        }
+        .legal-section li {
+            margin-bottom: 12px;
+        }
+        .legal-divider {
+            height: 1px;
+            background: var(--color-border-med);
+            margin: 60px 0;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 40px;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--silver-dim);
+            border-bottom: 1px solid var(--color-border-med);
+            padding-bottom: 8px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .back-link:hover {
+            color: var(--silver-light);
+            border-color: var(--silver);
+        }
+        hr {
+            border-color: var(--color-border);
+            margin: 40px 0;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            border-top: 1px solid var(--color-border-solid);
+            padding: 70px 20px 40px;
+            background: var(--color-bg);
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 34px;
+            font-weight: 300;
+            color: var(--color-text-secondary);
+            letter-spacing: 6px;
+            margin-bottom: 12px;
+        }
+        .footer-motto {
+            font-family: var(--font-serif-alt);
+            font-size: 15px;
+            font-style: italic;
+            color: var(--color-text-dim);
+        }
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--color-border-solid);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: var(--color-text-faint);
+        }
+        .footer-links a {
+            color: var(--color-text-faint);
+            text-decoration: none;
+            margin: 0 12px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--silver-light); }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .navbar { padding: 0 32px; }
+            .legal-container { padding: 60px 32px 100px; }
+        }
+        @media (max-width: 768px) {
+            .navbar { padding: 0 20px; }
+            nav, .btn-outline { display: none; }
+            .hamburger { display: block; }
+            .legal-container { padding: 40px 24px 80px; }
+            .legal-section h2 { font-size: 28px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .legal-hero { height: 32vh; min-height: 220px; }
+            .legal-hero-content h1 { font-size: 38px; }
+        }
+
+        /* reveal animation (subtle) */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR (identical to main) -->
+<header class="navbar" id="navbar">
+    <a href="index.html" class="logo">
+        <span class="logo-main">MBM</span>
+        <span class="logo-sub">Conciergerie</span>
+    </a>
+    <nav>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#offmarket">Off Market</a>
+        <a href="index.html#international">International</a>
+        <a href="index.html#signature">Signature</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="btn-outline">Demande Privée</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><i class="ri-menu-3-fill"></i></button>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#offmarket">Off Market</a>
+    <a href="index.html#international">International</a>
+    <a href="index.html#signature">Signature</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html#contact" style="color:var(--silver-light)">Demande Privée</a>
+</div>
+
+<!-- HERO MINI -->
+<section class="legal-hero">
+    <div class="legal-hero-content">
+        <h1>Informations <em>Légales</em></h1>
+        <p>Confidentialité & Mentions légales</p>
+    </div>
+</section>
+
+<div class="legal-container">
+    <!-- MENTIONS LÉGALES SECTION -->
+    <div id="mentions" class="legal-section fade-up">
+        <h2>Mentions Légales</h2>
+        <p><strong>Éditeur du site</strong><br>
+        MBM Conciergerie — Société de services privés internationale<br>
+        Siège social : 8 Avenue de la Grande Armée, 75008 Paris, France<br>
+        Numéro SIRET : 934 821 076 00012 — RCS Paris<br>
+        Directeur de la publication : M. Baptiste Mercier</p>
+        
+        <p><strong>Hébergement</strong><br>
+        Ce site est hébergé par NETLIFY.APP .<br>
+        </p>
+        
+        <p><strong>Propriété intellectuelle</strong><br>
+        L’ensemble des éléments composant ce site (textes, logo, images, vidéos, structure, design) est la propriété exclusive de MBM Conciergerie. Toute reproduction, distribution ou exploitation, même partielle, est interdite sans autorisation écrite préalable.</p>
+        
+        <p><strong>Conformité et médiation</strong><br>
+        Conformément à l’article L.616-1 du Code de la consommation, tout client dispose du droit de recourir gratuitement à un médiateur de la consommation en cas de litige. Nous demeurons à votre disposition pour toute clarification.</p>
+    </div>
+
+    <div class="legal-divider"></div>
+
+    <!-- POLITIQUE DE CONFIDENTIALITÉ / RGPD -->
+    <div id="confidentialite" class="legal-section fade-up">
+        <h2>Politique de Confidentialité</h2>
+        <p>MBM Conciergerie accorde une importance fondamentale à la protection de vos données personnelles. Cette politique décrit comment nous collectons, utilisons et protégeons vos informations dans le cadre de nos services privés internationaux.</p>
+        
+        <h3>1. Collecte des informations</h3>
+        <p>Nous recueillons les données que vous nous transmettez volontairement via notre formulaire de contact, nos échanges par email (contact.mbmconciergerie@gmail.com) ou par voie téléphonique. Ces données peuvent inclure : nom, prénom, adresse email, numéro de téléphone, préférences de service, demandes confidentielles, coordonnées postales.</p>
+        
+        <h3>2. Finalités du traitement</h3>
+        <p>Vos données sont utilisées exclusivement pour : répondre à vos demandes privées, gérer les prestations de conciergerie (réservations, accès Off Market, voyages), et vous fournir un accompagnement personnalisé. Aucune prospection commerciale automatisée n’est réalisée sans consentement explicite.</p>
+        
+        <h3>3. Base légale (RGPD)</h3>
+        <p>Le traitement repose sur l’exécution de mesures précontractuelles (demande de devis, renseignements) ainsi que sur l’intérêt légitime à garantir la qualité de notre service. Pour toute opération marketing directe, votre consentement sera demandé au préalable.</p>
+        
+        <h3>4. Durée de conservation</h3>
+        <p>Les données clients sont conservées pendant la durée nécessaire à la gestion de la relation client, puis archivées conformément aux obligations légales (5 ans pour les données contractuelles). Les demandes non abouties sont supprimées après 24 mois.</p>
+        
+        <h3>5. Destinataires et sécurité</h3>
+        <p>Vos informations sont strictement confidentielles. Seuls les membres habilités de MBM Conciergerie y ont accès. Nous ne vendons, ne louons ni ne partageons vos données avec des tiers sans votre consentement explicite, sauf obligation légale. Toutes les transmissions sont chiffrées et nos serveurs respectent les normes de sécurité les plus élevées.</p>
+        
+        <h3>6. Vos droits</h3>
+        <p>Conformément au RGPD (Règlement Général sur la Protection des Données), vous disposez des droits d’accès, de rectification, d’effacement, d’opposition, à la limitation du traitement et à la portabilité de vos données. Pour exercer ces droits, veuillez adresser votre demande accompagnée d’une pièce d’identité à : <strong>contact.mbmconciergerie@gmail.com</strong> ou par courrier à notre adresse siège.</p>
+        
+        <h3>7. Cookies et technologies</h3>
+        <p>Notre site utilise uniquement des cookies strictement nécessaires au bon fonctionnement (navigation, préférences de session). Aucun cookie publicitaire ou de suivi tiers n’est déployé. Vous pouvez configurer votre navigateur pour bloquer les cookies, mais certaines fonctionnalités pourraient être altérées.</p>
+        
+        <h3>8. Données sensibles</h3>
+        <p>MBM Conciergerie traite avec une discrétion absolue les éventuelles demandes sensibles. Vos informations personnelles ne sont jamais divulguées sans votre accord exprès, et nos engagements de confidentialité sont intégrés dans nos contrats de prestation.</p>
+        
+        <p><strong>Responsable protection des données :</strong> M. Baptiste Mercier — <a href="mailto:contact.mbmconciergerie@gmail.com" style="color: var(--silver-light);">contact.mbmconciergerie@gmail.com</a></p>
+        <p>Dernière mise à jour : Janvier 2026.</p>
+    </div>
+    
+    <div class="legal-divider"></div>
+    
+    <!-- INFORMATIONS COMPLÉMENTAIRES COOKIES -->
+    <div class="legal-section fade-up">
+        <h2>Cookies & Technologies</h2>
+        <p>Le site mb m-conciergerie.com n'utilise aucun cookie de profilage. Seuls des cookies techniques (session, préférence d’affichage) sont temporairement stockés. Aucune information n’est cédée à des partenaires publicitaires. Vous pouvez paramétrer votre navigateur pour refuser les cookies sans incidence majeure sur l’expérience utilisateur.</p>
+        <p>Pour plus d’informations : consultez la CNIL ou contactez notre DPO.</p>
+    </div>
+
+    <hr>
+    
+    <!-- LIEN RETOUR ACCUEIL -->
+    <a href="index.html" class="back-link">
+        <i class="ri-arrow-left-line"></i> Retour à l'accueil MBM Conciergerie
+    </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-logo">MBM</div>
+        <div class="footer-motto">Conciergerie Privée Internationale — Discrétion, Excellence, Sérénité</div>
+        <div class="footer-bottom">
+            <div>© 2026 MBM Conciergerie — Tous droits réservés</div>
+            <div class="footer-links">
+                <a href="legal.html#mentions">Mentions Légales</a>
+                <span style="color:var(--color-border-med)">|</span>
+                <a href="legal.html#confidentialite">Confidentialité & RGPD</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // ========== HAMBURGER MENU ==========
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            hamburger.querySelector('i').className = isOpen ? 'ri-close-line' : 'ri-menu-3-fill';
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                if (hamburger) hamburger.querySelector('i').className = 'ri-menu-3-fill';
+            });
+        });
+    }
+
+    // smooth anchor scroll for internal sections within this page
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === "#" || targetId === "") return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Reveal on scroll (fade-up)
+    const fadeElements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Navbar background already fixed, but ensure no splash conflict
+    // small modification: no splash on legal pages. 
+    // also prevent any extra transition class issues
+    document.body.classList.remove('splash-active');
+</script>
+</body>
+</html>
