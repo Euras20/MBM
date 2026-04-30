@@ -1,0 +1,327 @@
+
+        /* ========== GLOBAL STYLES (consistent with main site) ========== */
+        :root {
+            --color-bg: #050505;
+            --color-bg-alt: #080808;
+            --color-bg-mid: #0b0b0b;
+            --color-border: rgba(255,255,255,0.07);
+            --color-border-solid: #1a1a1a;
+            --color-border-med: #2a2a2a;
+            --color-text-primary: #f0ede8;
+            --color-text-secondary: #c8c4bc;
+            --color-text-muted: #9a9590;
+            --color-text-dim: #6e6a64;
+            --color-text-faint: #4a4640;
+            --silver: #b0b0b0;
+            --silver-light: #d0d0d0;
+            --silver-dim: #888888;
+            --font-serif: 'Cormorant', serif;
+            --font-serif-alt: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --navbar-height: 80px;
+            --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-bg);
+            color: var(--color-text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 0 64px;
+            height: var(--navbar-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(5,5,5,0.94);
+            border-bottom: 1px solid rgba(176,176,176,0.12);
+            backdrop-filter: blur(18px);
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            font-family: var(--font-serif);
+        }
+        .logo-main {
+            font-size: 20px;
+            letter-spacing: 4px;
+            color: var(--color-text-primary);
+            font-weight: 300;
+        }
+        .logo-sub {
+            font-size: 8px;
+            font-family: var(--font-sans);
+            letter-spacing: 5px;
+            color: var(--silver-dim);
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+        nav {
+            display: flex;
+            gap: 36px;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--color-text-muted);
+            font-size: 12px;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            transition: color var(--transition-base);
+        }
+        nav a:hover { color: var(--color-text-primary); }
+        .btn-outline {
+            border: 1px solid rgba(176,176,176,0.3);
+            padding: 14px 30px;
+            text-decoration: none;
+            color: var(--silver-light);
+            font-size: 9px;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-outline::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--silver);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+        .btn-outline:hover { color: #000; border-color: var(--silver); }
+        .btn-outline:hover::before { transform: scaleX(1); }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-text-secondary);
+            font-size: 22px;
+            cursor: pointer;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: var(--navbar-height);
+            left: 0;
+            width: 100%;
+            background: rgba(5,5,5,0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(176,176,176,0.12);
+            padding: 24px;
+            z-index: 999;
+            flex-direction: column;
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            pointer-events: none;
+        }
+        .mobile-menu.open {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--color-text-muted);
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        /* ========== HERO MINI ========== */
+        .legal-hero {
+            height: 38vh;
+            min-height: 280px;
+            background: linear-gradient(135deg, #080808 0%, #030303 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: var(--navbar-height);
+            border-bottom: 1px solid var(--color-border-med);
+            position: relative;
+        }
+        .legal-hero-content h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(44px, 6vw, 72px);
+            font-weight: 300;
+            letter-spacing: -0.01em;
+            color: var(--color-text-primary);
+        }
+        .legal-hero-content h1 em {
+            font-style: italic;
+            color: var(--silver-light);
+        }
+        .legal-hero-content p {
+            color: var(--color-text-muted);
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 16px;
+        }
+
+        /* ========== LEGAL CONTENT ========== */
+        .legal-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 40px 120px;
+        }
+        .legal-section {
+            margin-bottom: 70px;
+            scroll-margin-top: 100px;
+        }
+        .legal-section h2 {
+            font-family: var(--font-serif-alt);
+            font-size: 32px;
+            font-weight: 400;
+            color: var(--color-text-secondary);
+            border-left: 3px solid var(--silver);
+            padding-left: 20px;
+            margin-bottom: 36px;
+            letter-spacing: -0.3px;
+        }
+        .legal-section h3 {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 400;
+            margin: 28px 0 16px 0;
+            color: var(--silver-light);
+        }
+        .legal-section p, .legal-section li {
+            font-size: 15px;
+            line-height: 1.85;
+            color: var(--color-text-muted);
+            margin-bottom: 18px;
+            font-weight: 300;
+        }
+        .legal-section strong {
+            color: var(--silver-light);
+            font-weight: 500;
+        }
+        .legal-section ul, .legal-section ol {
+            margin: 20px 0 20px 30px;
+        }
+        .legal-section li {
+            margin-bottom: 12px;
+        }
+        .legal-divider {
+            height: 1px;
+            background: var(--color-border-med);
+            margin: 60px 0;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 40px;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--silver-dim);
+            border-bottom: 1px solid var(--color-border-med);
+            padding-bottom: 8px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .back-link:hover {
+            color: var(--silver-light);
+            border-color: var(--silver);
+        }
+        hr {
+            border-color: var(--color-border);
+            margin: 40px 0;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            border-top: 1px solid var(--color-border-solid);
+            padding: 70px 20px 40px;
+            background: var(--color-bg);
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 34px;
+            font-weight: 300;
+            color: var(--color-text-secondary);
+            letter-spacing: 6px;
+            margin-bottom: 12px;
+        }
+        .footer-motto {
+            font-family: var(--font-serif-alt);
+            font-size: 15px;
+            font-style: italic;
+            color: var(--color-text-dim);
+        }
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--color-border-solid);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: var(--color-text-faint);
+        }
+        .footer-links a {
+            color: var(--color-text-faint);
+            text-decoration: none;
+            margin: 0 12px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--silver-light); }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .navbar { padding: 0 32px; }
+            .legal-container { padding: 60px 32px 100px; }
+        }
+        @media (max-width: 768px) {
+            .navbar { padding: 0 20px; }
+            nav, .btn-outline { display: none; }
+            .hamburger { display: block; }
+            .legal-container { padding: 40px 24px 80px; }
+            .legal-section h2 { font-size: 28px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .legal-hero { height: 32vh; min-height: 220px; }
+            .legal-hero-content h1 { font-size: 38px; }
+        }
+
+        /* reveal animation (subtle) */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
