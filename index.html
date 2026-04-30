@@ -13,17 +13,21 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="French">
     <meta name="revisit-after" content="7 days">
-    <link rel="canonical" href="https://mbm-conciergerie.com">
+    <link rel="canonical" href="https://mbm-conciergerie.com/">
+    <meta name="googlebot" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="business.business">
     <meta property="og:url" content="https://mbm-conciergerie.com">
     <meta property="og:title" content="MBM Conciergerie — Service Privé International">
     <meta property="og:description" content="Services de conciergerie de luxe internationaux. Gestion de propriétés, réservations exclusives et assistance personnelle 24/7.">
-    <meta property="og:image" content="https://mbm-conciergerie.com/img/og-image.jpg">
+    <meta property="og:image" content="https://mbm-conciergerie.com/villa-CXHtPJSh.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="fr_FR">
+    <meta property="og:image:secure_url" content="https://mbm-conciergerie.com/logo-mbm.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="MBM Conciergerie — Service Privé International de Luxe">
     <meta property="og:site_name" content="MBM Conciergerie">
     <meta property="business:contact_data:locality" content="Paris">
     <meta property="business:contact_data:country_name" content="France">
@@ -33,7 +37,7 @@
     <meta name="twitter:url" content="https://mbm-conciergerie.com">
     <meta name="twitter:title" content="MBM Conciergerie — Service Privé International">
     <meta name="twitter:description" content="Découvrez nos services de conciergerie de luxe : gestion de propriétés, réservations exclusives et assistance personnelle.">
-    <meta name="twitter:image" content="https://mbm-conciergerie.com/img/og-image.jpg">
+    <meta name="twitter:image" content="https://mbm-conciergerie.com/logo-mbm.png">
     
     <!-- Local Business Schema Markup -->
     <script type="application/ld+json">
@@ -134,9 +138,9 @@
     </script>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo-mbm.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo-mbm.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo-mbm.png">
     <link rel="manifest" href="site.webmanifest">
     
     <!-- Preconnect for Performance -->
@@ -161,7 +165,7 @@
     
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/mbm.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <base target="_blank">
 <body class="splash-active">
@@ -538,6 +542,7 @@
         <span class="form-note">Réponse sous 24h — 7j/7</span>
         <button type="submit" class="submit-btn">
           <span>Envoyer ma demande</span>
+          <span class="btn-arrow"></span>
         </button>
       </div>
     </form>
@@ -571,7 +576,7 @@
         <div class="footer-col-text">
           <a href="mailto:contact.mbmconciergerie@gmail.com">contact.mbmconciergerie@gmail.com</a><br>
           <a href="tel:+33662744394">+33 6 62 74 43 94</a><br>
-          Instagram : <a href="#">mbm.conciergerie</a>
+          Instagram : <a href="https://www.instagram.com/mbm.conciergerie?igsh=Y2wydGxpem9hejY1&utm_source=qr">mbm.conciergerie</a>
         </div>
       </div>
       <div class="footer-col">
@@ -590,99 +595,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-/* ── Splash Screen ── */
-const splashScreen = document.getElementById('splash-screen');
-setTimeout(() => {
-  splashScreen.classList.add('done');
-  document.body.classList.remove('splash-active');
-}, 3000);
-
-/* ── Navbar scroll ── */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-/* ── Hamburger ── */
-const hamburger  = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-hamburger.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  hamburger.querySelector('i').className = isOpen ? 'ri-close-line' : 'ri-menu-3-fill';
-});
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    hamburger.querySelector('i').className = 'ri-menu-3-fill';
-  });
-});
-
-/* ── Hero Parallax ── */
-const heroParallax = document.getElementById('hero-parallax');
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  if (scrollY < window.innerHeight) {
-    heroParallax.style.transform = `translateY(${scrollY * 0.3}px)`;
-  }
-}, { passive: true });
-
-/* ── Scroll Reveal ── */
-const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-reveals.forEach(el => revealObserver.observe(el));
-
-/* ── Smooth anchor scroll ── */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-/* ── Contact Form → Mailto ── */
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const name = document.getElementById('formName').value.trim();
-  const email = document.getElementById('formEmail').value.trim();
-  const phone = document.getElementById('formPhone').value.trim();
-  const message = document.getElementById('formMessage').value.trim();
-  
-  if (!name || !email || !phone || !message) {
-    alert('Veuillez remplir tous les champs du formulaire.');
-    return;
-  }
-  
-  const subject = encodeURIComponent('Demande Privée — MBM Conciergerie');
-  const body = encodeURIComponent(
-    `Bonjour MBM Conciergerie,\n\n` +
-    `Je souhaite vous soumettre une demande privée. Voici mes coordonnées :\n\n` +
-    `Nom : ${name}\n` +
-    `Email : ${email}\n` +
-    `Téléphone : ${phone}\n\n` +
-    `Message confidentiel :\n` +
-    `─────────────────────\n` +
-    `${message}\n` +
-    `─────────────────────\n\n` +
-    `Cordialement,\n${name}`
-  );
-  
-  window.location.href = `mailto:contact.mbmconciergerie@gmail.com?subject=${subject}&body=${body}`;
-});
-</script>
+<script  src="assets/js/mbm.js"></script>
 </body>
 </html>
